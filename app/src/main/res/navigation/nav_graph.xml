@@ -80,5 +80,9 @@
         android:id="@+id/lugarDetallesFragment"
         android:name="com.example.carnotaturismo.fragments.LugarDetallesFragment"
         android:label="fragment_lugar_detalles"
-        tools:layout="@layout/fragment_lugar_detalles" />
+        tools:layout="@layout/fragment_lugar_detalles" >
+        <argument
+            android:name="Lugar"
+            app:argType="com.example.carnotaturismo.model.Lugar" />
+    </fragment>
 </navigation>

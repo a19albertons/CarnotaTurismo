@@ -16,7 +16,8 @@ data class Lugar(
     val leyenda: String,
     val descripcion: String,
     val imagen: String,
-    val enlaceImagen: String,
+    val imagenMapa: String,
+    val imagenMapaEnlace: String,
     val tipo: TipoUbicacion,
     val importante: String,
     var favorito: Boolean

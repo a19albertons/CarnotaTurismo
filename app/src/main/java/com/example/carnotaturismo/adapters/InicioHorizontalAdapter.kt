@@ -4,10 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carnotaturismo.R
+import com.example.carnotaturismo.fragments.InicioFragmentDirections
 import com.example.carnotaturismo.model.Lugar
+import androidx.navigation.findNavController
+
 
 /**
  * Adaptador para el RecyclerView horizontal.
@@ -21,6 +25,7 @@ class InicioHorizontalAdapter(private var lista: List<Lugar>)
         val imagen: ImageView = itemView.findViewById<ImageView>(R.id.foto_inicio)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val ubicacion: TextView = itemView.findViewById(R.id.ubicacion)
+        val tarjeta: LinearLayout = itemView.findViewById(R.id.tarjeta)
     }
 
     // 2. Crea nuevos ViewHolders (infla el layout de la fila)
@@ -46,6 +51,9 @@ class InicioHorizontalAdapter(private var lista: List<Lugar>)
         //}
         holder.ubicacion.text = currentItem.ubicacion
         holder.titulo.text = currentItem.titulo
+        holder.tarjeta.setOnClickListener {
+            holder.itemView.findNavController().navigate(InicioFragmentDirections.actionInicioFragmentToLugarDetallesFragment(currentItem))
+        }
 
     }
 

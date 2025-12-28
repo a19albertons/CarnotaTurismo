@@ -5,8 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carnotaturismo.R
+import com.example.carnotaturismo.fragments.InicioFragmentDirections
+import com.example.carnotaturismo.fragments.VerTodosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 
 class VerTodosAdapter(private val lugares: List<Lugar>)
@@ -17,6 +20,7 @@ class VerTodosAdapter(private val lugares: List<Lugar>)
         val imagen: ImageView = itemView.findViewById(R.id.foto_inicio)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val ubicacion: TextView = itemView.findViewById(R.id.ubicacion)
+        val tarjeta: View = itemView.findViewById(R.id.tarjeta)
     }
 
     // 2. Crea nuevos ViewHolders (infla el layout de la fila)
@@ -44,6 +48,9 @@ class VerTodosAdapter(private val lugares: List<Lugar>)
 
         holder.titulo.text = currentItem.titulo
         holder.ubicacion.text = currentItem.ubicacion
+        holder.tarjeta.setOnClickListener {
+            holder.itemView.findNavController().navigate(VerTodosFragmentDirections.actionVerTodosFragmentToLugarDetallesFragment(currentItem))
+        }
     }
 
     // 4. Devuelve el número total de elementos
