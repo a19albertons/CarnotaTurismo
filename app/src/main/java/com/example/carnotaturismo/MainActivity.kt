@@ -13,7 +13,13 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+/**
+ * Actividad principal de la aplicación.
+ */
 class MainActivity : AppCompatActivity() {
+    /**
+     * Controlador de navegación.
+     */
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,10 +47,24 @@ class MainActivity : AppCompatActivity() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomNav.setupWithNavController(navController)
     }
+
+    /**
+     * Crea el menú de opciones.
+     *
+     * @param menu Menú de opciones.
+     * @return true si se creó el menú de opciones.
+     */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_toolbar, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
+    /**
+     * Maneja la selección de elementos del menú de opciones.
+     *
+     * @param item Elemento del menú seleccionado.
+     * @return true si se manejó la selección.
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(
             item,

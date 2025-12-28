@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.carnotaturismo.R
 import com.example.carnotaturismo.model.Lugar
 
+/**
+ * Adaptador para el RecyclerView horizontal.
+ *
+ */
 class InicioHorizontalAdapter(private var lista: List<Lugar>)
     : RecyclerView.Adapter<InicioHorizontalAdapter.ViewHolder>() {
 

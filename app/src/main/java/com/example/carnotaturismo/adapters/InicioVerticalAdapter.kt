@@ -11,6 +11,10 @@ import com.example.carnotaturismo.R
 import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.TipoUbicacion
 
+/**
+ * Adaptador para el RecyclerView vertical.
+ *
+ */
 class InicioVerticalAdapter(private var tipos: Array<TipoUbicacion>, private var model: List<Lugar>)
     : RecyclerView.Adapter<InicioVerticalAdapter.ViewHolder>() {
 
