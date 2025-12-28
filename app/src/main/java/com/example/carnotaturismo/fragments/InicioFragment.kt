@@ -42,6 +42,7 @@ class InicioFragment : Fragment() {
         val adapter = InicioVerticalAdapter(TipoUbicacion.entries.toTypedArray(), emptyList())
         recyclerViewVertical.adapter = adapter
 
+        // Observar cambios en LiveData y actualizar el adapter
         model.lugares.observe(viewLifecycleOwner) { lista ->
             adapter.setData(lista)
         }

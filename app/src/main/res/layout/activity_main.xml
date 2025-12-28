@@ -27,6 +27,7 @@
         app:navGraph="@navigation/nav_graph"
         app:defaultNavHost="true"
         android:fontFamily="@font/opensans"
+        android:background="@color/amarillo_claro"
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
