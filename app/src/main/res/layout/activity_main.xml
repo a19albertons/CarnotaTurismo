@@ -14,6 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_toolbar"
+        android:background="@color/verde_oscuro"
+        android:fontFamily="@font/montserrat_bold"
         />
 
     <androidx.fragment.app.FragmentContainerView
@@ -24,6 +26,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:navGraph="@navigation/nav_graph"
         app:defaultNavHost="true"
+        android:fontFamily="@font/opensans"
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -32,6 +35,8 @@
         android:layout_height="wrap_content"
         app:menu="@menu/menu_bottom"
         app:labelVisibilityMode="labeled"
+        app:backgroundTint="@color/verde_oscuro"
+        android:fontFamily="@font/montserrat_bold"
         />
 </LinearLayout>
 
