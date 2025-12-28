@@ -6,7 +6,7 @@ INSERT INTO "android_metadata" VALUES ('es_ES');
 
 -- 2. Tabla de Lugares
 -- Nota: 'favorito' es INTEGER (0=false, 1=true)
-CREATE TABLE IF NOT EXISTS "lugares" (
+CREATE TABLE IF NOT EXISTS "ubicaciones" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     "titulo" TEXT NOT NULL,
     "ubicacion" TEXT NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS "RutaLugarCrossRef" (
     "lugarId" INTEGER NOT NULL,
     PRIMARY KEY("rutaId", "lugarId"),
     FOREIGN KEY("rutaId") REFERENCES "rutas"("id") ON UPDATE NO ACTION ON DELETE CASCADE,
-    FOREIGN KEY("lugarId") REFERENCES "lugares"("id") ON UPDATE NO ACTION ON DELETE CASCADE
+    FOREIGN KEY("lugarId") REFERENCES "ubicaciones"("id") ON UPDATE NO ACTION ON DELETE CASCADE
 );
 
 -- ==========================================
@@ -50,17 +50,15 @@ CREATE TABLE IF NOT EXISTS "RutaLugarCrossRef" (
 
 -- Insertar Lugares
 -- ID 1: Monumento (Estará en Ruta 1 y Ruta 2)
-INSERT INTO "lugares" VALUES (1, 'Hórreo de Carnota', 'Carnota Centro', 'Uno de los más grandes de Galicia', 'Monumento nacional construido en piedra...', 'horreo_carnota.jpg', 'http://example.com/horreo', 'Monumento', 'Visita obligada', 1);
+INSERT INTO "ubicaciones" VALUES (1, 'Hórreo de Carnota', 'Carnota Centro', 'Uno de los más grandes de Galicia', 'Monumento nacional construido en piedra...', 'horreo_carnota.jpg', 'http://example.com/horreo', 'Monumento', 'Visita obligada', 1);
 
 -- ID 2: Playa (Estará en Ruta 2)
-INSERT INTO "lugares" VALUES (2, 'Playa de Boca do Río', 'Costa de Carnota', 'Donde el río encuentra el mar', 'Hermosa playa con formaciones rocosas...', 'boca_do_rio.jpg', 'http://example.com/boca', 'Playa', 'Llevar protector solar', 0);
-
+INSERT INTO "ubicaciones" VALUES (2, 'Playa de Boca do Río', 'Costa de Carnota', 'Donde el río encuentra el mar', 'Hermosa playa con formaciones rocosas...', 'boca_do_rio.jpg', 'http://example.com/boca', 'Playa', 'Llevar protector solar', 0);
 -- ID 3: Senderismo (Estará en Ruta 1)
-INSERT INTO "lugares" VALUES (3, 'Monte Pindo', 'O Pindo', 'El Olimpo Celta', 'Formaciones graníticas con historia mitológica.', 'monte_pindo.jpg', 'http://example.com/pindo', 'Senderismo', 'Calzado cómodo necesario', 1);
+INSERT INTO "ubicaciones" VALUES (3, 'Monte Pindo', 'O Pindo', 'El Olimpo Celta', 'Formaciones graníticas con historia mitológica.', 'monte_pindo.jpg', 'http://example.com/pindo', 'Senderismo', 'Calzado cómodo necesario', 1);
 
 -- ID 4: Monumento (No asignado a ninguna ruta - Huérfano)
-INSERT INTO "lugares" VALUES (4, 'Fervenza de Ézaro', 'Dumbría/Carnota', 'El río Xallas cae al mar', 'Espectacular cascada iluminada en verano.', 'ezaro.jpg', 'http://example.com/ezaro', 'Monumento', 'Verificar horarios de iluminación', 0);
-
+INSERT INTO "ubicaciones" VALUES (4, 'Fervenza de Ézaro', 'Dumbría/Carnota', 'El río Xallas cae al mar', 'Espectacular cascada iluminada en verano.', 'ezaro.jpg', 'http://example.com/ezaro', 'Monumento', 'Verificar horarios de iluminación', 0);
 
 -- Insertar Rutas
 -- ID 1: Ruta Compleja

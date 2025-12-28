@@ -50,5 +50,6 @@ class MainActivity : AppCompatActivity() {
             item,
             navController
         ) || super.onOptionsItemSelected(item)
+
     }
 }
