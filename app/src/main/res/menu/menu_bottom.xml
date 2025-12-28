@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/inicioFragment"
+        android:title="@string/inicio"
+        android:icon="@drawable/inicio"
+        />
+    <item
+        android:id="@+id/lugarFragment"
+        android:title="@string/ubicaciones"
+        android:icon="@drawable/ubicaciones"
+        />
+    <item
+        android:id="@+id/itinerarioListaFragment"
+        android:title="@string/rutas"
+        android:icon="@drawable/rutas"
+        />
+    <item
+        android:id="@+id/mapaGeneralFragment"
+        android:title="@string/mapa"
+        android:icon="@drawable/mapa"
+        />
+    <item
+        android:id="@+id/favoritosFragment"
+        android:title="@string/favoritos"
+        android:icon="@drawable/favoritos"
+        />
+
+
+
+</menu>

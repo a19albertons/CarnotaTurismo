@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.carnotaturismo.fragments.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_verTodosFragment"
+            app:destination="@id/verTodosFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_lugarDetallesFragment"
+            app:destination="@id/lugarDetallesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ajustesFragment"
+        android:name="com.example.carnotaturismo.fragments.AjustesFragment"
+        android:label="fragment_ajustes"
+        tools:layout="@layout/fragment_ajustes" />
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.example.carnotaturismo.fragments.FavoritosFragment"
+        android:label="fragment_favoritos"
+        tools:layout="@layout/fragment_favoritos" />
+    <fragment
+        android:id="@+id/itinerarioDetallesFragment"
+        android:name="com.example.carnotaturismo.fragments.ItinerarioDetallesFragment"
+        android:label="fragment_itinerario_detalles"
+        tools:layout="@layout/fragment_itinerario_detalles" />
+    <fragment
+        android:id="@+id/itinerarioListaFragment"
+        android:name="com.example.carnotaturismo.fragments.ItinerarioListaFragment"
+        android:label="fragment_itinerario_lista"
+        tools:layout="@layout/fragment_itinerario_lista" >
+        <action
+            android:id="@+id/action_itinerarioListaFragment_to_itinerarioDetallesFragment"
+            app:destination="@id/itinerarioDetallesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lugarFragment"
+        android:name="com.example.carnotaturismo.fragments.LugarFragment"
+        android:label="fragment_lugar"
+        tools:layout="@layout/fragment_lugar" >
+        <action
+            android:id="@+id/action_lugarFragment_to_lugarDetallesFragment"
+            app:destination="@id/lugarDetallesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verTodosFragment"
+        android:name="com.example.carnotaturismo.fragments.VerTodosFragment"
+        android:label="fragment_ver_todos"
+        tools:layout="@layout/fragment_ver_todos" >
+        <action
+            android:id="@+id/action_verTodosFragment_to_lugarDetallesFragment"
+            app:destination="@id/lugarDetallesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="com.example.carnotaturismo.fragments.SobreFragment"
+        android:label="fragment_sobre"
+        tools:layout="@layout/fragment_sobre" />
+    <fragment
+        android:id="@+id/mapaGeneralFragment"
+        android:name="com.example.carnotaturismo.fragments.MapaGeneralFragment"
+        android:label="fragment_mapa_general"
+        tools:layout="@layout/fragment_mapa_general" />
+    <fragment
+        android:id="@+id/lugarDetallesFragment"
+        android:name="com.example.carnotaturismo.fragments.LugarDetallesFragment"
+        android:label="fragment_lugar_detalles"
+        tools:layout="@layout/fragment_lugar_detalles" />
+</navigation>
