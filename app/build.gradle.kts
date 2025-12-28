@@ -1,8 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-parcelize")
     id("kotlin-kapt")
-}
+    id("androidx.navigation.safeargs")
+} 
 
 android {
     namespace = "com.example.carnotaturismo"

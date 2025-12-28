@@ -4,24 +4,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.lifecycle.LiveData
+
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carnotaturismo.R
 import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.TipoUbicacion
 
+
 /**
  * Adaptador para el RecyclerView vertical.
  *
  */
-class InicioVerticalAdapter(private var tipos: Array<TipoUbicacion>, private var model: List<Lugar>)
-    : RecyclerView.Adapter<InicioVerticalAdapter.ViewHolder>() {
+class InicioVerticalAdapter(
+    private var tipos: Array<TipoUbicacion>,
+    private var model: List<Lugar>,
+    private val onVerTodos: (List<Lugar>) -> Unit
+) : RecyclerView.Adapter<InicioVerticalAdapter.ViewHolder>() {
 
 
     // 1. ViewHolder: Guarda las referencias a las vistas de cada fila
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tipoUbicacion: TextView = itemView.findViewById(R.id.tipo)
+
+        // Necesario para la vista ver todos
+        val verTodos: TextView = itemView.findViewById(R.id.verTodos)
         val RecyclerViewHorizontal: RecyclerView = itemView.findViewById(R.id.RecyclerViewHorizontal)
     }
 
@@ -51,6 +58,12 @@ class InicioVerticalAdapter(private var tipos: Array<TipoUbicacion>, private var
 
         // Asignar el adaptador (filtrado por tipo)
         holder.RecyclerViewHorizontal.adapter = InicioHorizontalAdapter(model.filter { it.tipo == currentItem })
+
+        // La opcion que intento aplicar dialogo democratico
+        holder.verTodos.setOnClickListener {
+            val listaFiltrada = model.filter { it.tipo == currentItem }
+            onVerTodos(listaFiltrada)
+        }
     }
 
     // 4. Devuelve el número total de elementos

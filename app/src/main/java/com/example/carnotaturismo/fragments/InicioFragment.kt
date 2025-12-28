@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.fragment.findNavController
 import com.example.carnotaturismo.adapters.InicioVerticalAdapter
 import com.example.carnotaturismo.databinding.FragmentInicioBinding
 import com.example.carnotaturismo.model.TipoUbicacion
@@ -39,7 +40,13 @@ class InicioFragment : Fragment() {
         recyclerViewVertical.layoutManager = LinearLayoutManager(requireContext())
 
         // Inicializar adapter con lista vacía y observar cambios en LiveData
-        val adapter = InicioVerticalAdapter(TipoUbicacion.entries.toTypedArray(), emptyList())
+        val adapter = InicioVerticalAdapter(TipoUbicacion.entries.toTypedArray(), emptyList()) { lista ->
+            // Navegar desde el fragment (usando Safe Args) para mantener el BottomNavigationView sincronizado
+            // La opción que intenta aplicar democracia
+            val array = lista.toTypedArray()
+            val action = InicioFragmentDirections.actionInicioFragmentToVerTodosFragment(array)
+            findNavController().navigate(action)
+        }
         recyclerViewVertical.adapter = adapter
 
         // Observar cambios en LiveData y actualizar el adapter

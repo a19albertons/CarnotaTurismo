@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_inicio" >
         <action
             android:id="@+id/action_inicioFragment_to_verTodosFragment"
-            app:destination="@id/verTodosFragment" />
+            app:destination="@id/verTodosFragment" >
+            <argument
+                android:name="listaLugaresMostrar"
+                app:argType="com.example.carnotaturismo.model.Lugar[]" />
+        </action> 
         <action
             android:id="@+id/action_inicioFragment_to_lugarDetallesFragment"
             app:destination="@id/lugarDetallesFragment" />
@@ -58,6 +62,9 @@
         <action
             android:id="@+id/action_verTodosFragment_to_lugarDetallesFragment"
             app:destination="@id/lugarDetallesFragment" />
+        <argument
+            android:name="listaLugaresMostrar"
+            app:argType="com.example.carnotaturismo.model.Lugar[]" />
     </fragment>
     <fragment
         android:id="@+id/sobreFragment"

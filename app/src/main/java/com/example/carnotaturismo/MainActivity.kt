@@ -46,6 +46,43 @@ class MainActivity : AppCompatActivity() {
         // BottomNavigationView
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomNav.setupWithNavController(navController)
+
+        // Asegurar que, si estamos en un destino que no está en el menú (ej. VerTodosFragment),
+        // seleccionar una pestaña del BottomNavigationView lleve siempre al destino correspondiente.
+        bottomNav.setOnItemSelectedListener { item ->
+            // Intentar comportamiento por defecto
+            val handled = NavigationUI.onNavDestinationSelected(item, navController)
+            if (handled) {
+                true
+            } else {
+                // Si no se pudo navegar directamente, hacer popBackStack hasta ese destino
+                // Aplica dialogo avanzado
+                when (item.itemId) {
+                    R.id.inicioFragment -> {
+                        navController.popBackStack(R.id.inicioFragment, false)
+                        true
+                    }
+                    R.id.lugarFragment -> {
+                        navController.popBackStack(R.id.lugarFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                    }
+                    R.id.itinerarioListaFragment -> {
+                        navController.popBackStack(R.id.itinerarioListaFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                    }
+                    R.id.mapaGeneralFragment -> {
+                        navController.popBackStack(R.id.mapaGeneralFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                    }
+                    R.id.favoritosFragment -> {
+                        navController.popBackStack(R.id.favoritosFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                    }
+                    else -> false
+                }
+            }
+        }
+
+        // Si el usuario re-selecciona una pestaña ya seleccionada, hacer pop hasta esa pantalla (comportamiento esperado)
+        bottomNav.setOnItemReselectedListener { item ->
+            navController.popBackStack(item.itemId, false)
+        }
     }
 
     /**

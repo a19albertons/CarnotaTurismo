@@ -5,29 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carnotaturismo.R
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.example.carnotaturismo.adapters.VerTodosAdapter
+import com.example.carnotaturismo.databinding.FragmentVerTodosBinding
+import com.example.carnotaturismo.model.Lugar
+import com.example.carnotaturismo.model.TurismoAppModel
+import kotlin.getValue
 
 /**
- * A simple [Fragment] subclass.
- * Use the [VerTodosFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * Permite ver todos los lugares de un tipo en concreto.
+ * Tambien soporta todos los tipos
  */
 class VerTodosFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private var _binding: FragmentVerTodosBinding? = null
+    private val binding get() = _binding!!
+
+    private val model: TurismoAppModel by viewModels {
+        ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
     override fun onCreateView(
@@ -35,26 +33,35 @@ class VerTodosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ver_todos, container, false)
+        _binding = FragmentVerTodosBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        // Recuperamos del bundle
+        val args = VerTodosFragmentArgs.fromBundle(requireArguments())
+        val lista = args.listaLugaresMostrar
+
+        // Recycler View
+        val recyclerView = binding.RecyclerViewVertTodos
+
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val adapter = VerTodosAdapter(lista.toList())
+        recyclerView.adapter = adapter
+
+
+
+
+
+
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment VerTodosFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            VerTodosFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+
     }
+
+
 }
