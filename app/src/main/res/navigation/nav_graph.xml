@@ -65,6 +65,9 @@
         <argument
             android:name="listaLugaresMostrar"
             app:argType="com.example.carnotaturismo.model.Lugar[]" />
+        <argument
+            android:name="tipo"
+            app:argType="com.example.carnotaturismo.model.TipoUbicacion" />
     </fragment>
     <fragment
         android:id="@+id/sobreFragment"

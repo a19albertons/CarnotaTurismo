@@ -48,6 +48,9 @@ class VerTodosFragment : Fragment() {
         val adapter = VerTodosAdapter(lista.toList())
         recyclerView.adapter = adapter
 
+        // Tipo
+        binding.tipo.text = args.tipo.toString()
+
 
 
 

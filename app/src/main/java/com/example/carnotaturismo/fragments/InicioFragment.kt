@@ -44,7 +44,7 @@ class InicioFragment : Fragment() {
             // Navegar desde el fragment (usando Safe Args) para mantener el BottomNavigationView sincronizado
             // La opción que intenta aplicar democracia
             val array = lista.toTypedArray()
-            val action = InicioFragmentDirections.actionInicioFragmentToVerTodosFragment(array)
+            val action = InicioFragmentDirections.actionInicioFragmentToVerTodosFragment(array, lista[0].tipo)
             findNavController().navigate(action)
         }
         recyclerViewVertical.adapter = adapter
