@@ -35,7 +35,11 @@
         android:id="@+id/itinerarioDetallesFragment"
         android:name="com.example.carnotaturismo.fragments.ItinerarioDetallesFragment"
         android:label="fragment_itinerario_detalles"
-        tools:layout="@layout/fragment_itinerario_detalles" />
+        tools:layout="@layout/fragment_itinerario_detalles" >
+        <argument
+            android:name="Ruta"
+            app:argType="com.example.carnotaturismo.model.Rutas" />
+    </fragment>
     <fragment
         android:id="@+id/itinerarioListaFragment"
         android:name="com.example.carnotaturismo.fragments.ItinerarioListaFragment"

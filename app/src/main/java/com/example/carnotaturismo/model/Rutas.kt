@@ -1,8 +1,11 @@
 package com.example.carnotaturismo.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity(tableName = "rutas")
 data class Rutas(
     @PrimaryKey(autoGenerate = true)
@@ -19,5 +22,4 @@ data class Rutas(
     val descripcion: String,
     val importante: String,
     var favorito: Boolean
-) {
-}
+) : Parcelable
