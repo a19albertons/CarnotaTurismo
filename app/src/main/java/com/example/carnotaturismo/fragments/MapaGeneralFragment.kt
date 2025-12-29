@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.carnotaturismo.R
-import com.example.carnotaturismo.databinding.FragmentLugarBinding
 import com.example.carnotaturismo.databinding.FragmentMapaGeneralBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 import kotlin.getValue
 
 /**

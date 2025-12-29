@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.carnotaturismo.R
 import com.example.carnotaturismo.adapters.LugarAdapter
-import com.example.carnotaturismo.adapters.VerTodosAdapter
 import com.example.carnotaturismo.databinding.FragmentLugarBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 
 /**
  * Fragmento que representa a un lugar/ubicacion

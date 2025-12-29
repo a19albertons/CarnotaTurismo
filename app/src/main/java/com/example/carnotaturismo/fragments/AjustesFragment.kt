@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.databinding.FragmentAjustesBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.services.MusicService
 
 /**

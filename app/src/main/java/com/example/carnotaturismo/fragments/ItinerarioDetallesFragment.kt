@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentItinerarioDetallesBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 
 /**
  * Clase que representa el fragmento Itinerario Detalles

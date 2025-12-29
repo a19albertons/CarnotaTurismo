@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.fragment.app.viewModels
 import com.example.carnotaturismo.databinding.FragmentSobreBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 
 /**
  * Clase que representa el fragmento Sobre

@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.carnotaturismo.R
 import com.example.carnotaturismo.adapters.ItinerarioListaAdapter
 import com.example.carnotaturismo.databinding.FragmentItinerarioListaBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 import kotlin.getValue
 
 /**

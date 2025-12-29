@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carnotaturismo.adapters.FavoritosLugarAdapter
 import com.example.carnotaturismo.adapters.FavoritosRutaAdapter
 import com.example.carnotaturismo.databinding.FragmentFavoritosBinding
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 import kotlin.getValue
 
 /**

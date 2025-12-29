@@ -1,6 +1,5 @@
 package com.example.carnotaturismo.fragments
 
-import android.app.Application
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.carnotaturismo.adapters.InicioVerticalAdapter
 import com.example.carnotaturismo.databinding.FragmentInicioBinding
 import com.example.carnotaturismo.model.TipoUbicacion
-import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 

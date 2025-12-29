@@ -1,4 +1,4 @@
-package com.example.carnotaturismo.model
+package com.example.carnotaturismo.viewModel
 
 import android.app.Application
 import android.content.Context
@@ -6,8 +6,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.carnotaturismo.dao.RutaLugarDAO
 import com.example.carnotaturismo.db.TurismoDatabase
+import com.example.carnotaturismo.model.Lugar
+import com.example.carnotaturismo.model.Rutas
+import com.example.carnotaturismo.model.RutasConLugares
 import com.example.carnotaturismo.repo.TurismoRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,7 +23,7 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
     /**
      * Base de datos de turismo
      */
-    private val database = TurismoDatabase.getDatabase(application)
+    private val database = TurismoDatabase.Companion.getDatabase(application)
 
     /**
      * Repository que encapsula acceso a datos
