@@ -11,6 +11,7 @@ import com.example.carnotaturismo.R
 import com.example.carnotaturismo.fragments.InicioFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 import androidx.navigation.findNavController
+import com.example.carnotaturismo.util.ImageHelper
 
 
 /**
@@ -38,17 +39,9 @@ class InicioHorizontalAdapter(private var lista: List<Lugar>)
     // 3. Reemplaza el contenido de una vista (une los datos a la vista)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = lista.get(position)
-        //val ctx = holder.itemView.context
-        //val imgRef = currentItem.imagen
-
-        // extrae "drawable" y "mi_imagen"
-        //val (type, name) = imgRef.removePrefix("@").split('/', limit = 2)
-        //val resId = ctx.resources.getIdentifier(name, type, ctx.packageName)
-        //if (resId != 0) {
-        //    holder.imagen.setImageResource(resId)
-        //} else {
-        //    holder.imagen.setImageResource(R.drawable.error_imagen) // fallback
-        //}
+        // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
+        val ctx = holder.itemView.context
+        ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
         holder.ubicacion.text = currentItem.ubicacion
         holder.titulo.text = currentItem.titulo
         holder.tarjeta.setOnClickListener {

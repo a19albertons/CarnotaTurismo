@@ -16,6 +16,7 @@
         android:textSize="20sp"
          />
     <ImageView
+        android:id="@+id/foto_mapa_general"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />

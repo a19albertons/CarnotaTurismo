@@ -37,17 +37,8 @@ class LugarDetallesFragment : Fragment() {
 
         // Actualizar UI
         binding.titulo.text = lugar.titulo
-        //val ctx = holder.itemView.context
-        //val imgRef = currentItem.imagen
-
-        // extrae "drawable" y "mi_imagen"
-        //val (type, name) = imgRef.removePrefix("@").split('/', limit = 2)
-        //val resId = ctx.resources.getIdentifier(name, type, ctx.packageName)
-        //if (resId != 0) {
-        //    holder.imagen.setImageResource(resId)
-        //} else {
-        //    holder.imagen.setImageResource(R.drawable.error_imagen) // fallback
-        //}
+        // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
+        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), lugar.imagen, binding.fotoMapa)
         binding.leyenda.text = lugar.leyenda
         binding.descripcion.text = lugar.descripcion
         binding.importante.text = lugar.importante
