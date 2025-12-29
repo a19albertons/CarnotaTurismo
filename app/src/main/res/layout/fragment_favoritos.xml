@@ -12,20 +12,33 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:fontFamily="@font/montserrat_medium"
-        android:text="favoritos"
+        android:text="Favoritos"
         android:layout_marginBottom="10dp"
         />
-    <androidx.recyclerview.widget.RecyclerView
 
-        android:id="@+id/RecyclerViewFavoritosLugar"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <androidx.recyclerview.widget.RecyclerView
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <androidx.recyclerview.widget.RecyclerView
 
-        android:id="@+id/RecyclerViewFavoritosRutas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+                android:id="@+id/RecyclerViewFavoritosLugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/RecyclerViewFavoritosRutas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

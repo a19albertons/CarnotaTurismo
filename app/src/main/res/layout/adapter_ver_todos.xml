@@ -8,12 +8,15 @@
     android:layout_height="wrap_content">
 
     <ImageView
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
         android:id="@+id/foto_inicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         />
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

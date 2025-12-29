@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     tools:context=".fragments.LugarDetallesFragment">
 
     <TextView
@@ -12,8 +13,10 @@
         android:layout_width="match_parent"
         android:fontFamily="@font/montserrat_medium"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="@string/hello_blank_fragment" />
     <ImageView
+        android:adjustViewBounds="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/foto_mapa"
@@ -21,7 +24,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/opensans"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="16sp"
         android:text="Leyenda"
         />
     <TextView
@@ -33,7 +37,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/opensans"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="16sp"
         android:text="Descripcion"
         />
     <TextView
@@ -45,7 +50,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/opensans"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="16sp"
         android:text="Importante"
         />
     <TextView

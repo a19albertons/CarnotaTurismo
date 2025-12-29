@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado activado: naranja -->
+    <item android:color="@color/naranja" android:state_checked="true" />
+    <!-- Estado por defecto: gris claro -->
+    <item android:color="#BDBDBD" />
+</selector>

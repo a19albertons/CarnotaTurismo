@@ -17,9 +17,9 @@
             android:text="Sobre"
             android:textSize="24sp"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="20sp" />
 
-        <!-- Yellow card with circular logo -->
+        <!-- Tarjeta con logo y lugar de turismo -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
 
         </FrameLayout>
 
-        <!-- Info card -->
+        <!-- Tarjeta información -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
