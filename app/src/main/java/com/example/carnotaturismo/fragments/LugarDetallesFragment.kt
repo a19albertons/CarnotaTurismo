@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.databinding.FragmentLugarDetallesBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
+import com.example.carnotaturismo.util.resolveString
 
 /**
  * Fragmento que representa lugar detalles
@@ -36,12 +37,12 @@ class LugarDetallesFragment : Fragment() {
         val lugar = args.lugar
 
         // Actualizar UI
-        binding.titulo.text = lugar.titulo
+        binding.titulo.text = requireContext().resolveString(lugar.titulo)
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
         com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), lugar.imagen, binding.fotoMapa)
-        binding.leyenda.text = lugar.leyenda
-        binding.descripcion.text = lugar.descripcion
-        binding.importante.text = lugar.importante
+        binding.leyenda.text = requireContext().resolveString(lugar.leyenda)
+        binding.descripcion.text = requireContext().resolveString(lugar.descripcion)
+        binding.importante.text = requireContext().resolveString(lugar.importante)
 
 
 

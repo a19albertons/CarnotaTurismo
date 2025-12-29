@@ -1,0 +1,18 @@
+<resources>
+    <!-- Strings para rutas (clave-based) -->
+
+    <string name="ruta_1_titulo">Ruta de los Gigantes</string>
+    <string name="ruta_1_duracion">3 horas</string>
+    <string name="ruta_1_dificultad">Media</string>
+    <string name="ruta_1_leyenda">Recorrido por monumentos clave</string>
+    <string name="ruta_1_descripcion">Una ruta que une historia y naturaleza.</string>
+    <string name="ruta_1_importante">Llevar agua</string>
+
+    <string name="ruta_2_titulo">Ruta Costera Relax</string>
+    <string name="ruta_2_duracion">1 hora</string>
+    <string name="ruta_2_dificultad">Baja</string>
+    <string name="ruta_2_leyenda">Paseo por la orilla</string>
+    <string name="ruta_2_descripcion">Ideal para familias.</string>
+    <string name="ruta_2_importante">Marea baja recomendada</string>
+
+</resources>

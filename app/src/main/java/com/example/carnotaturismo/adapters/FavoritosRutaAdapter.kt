@@ -12,6 +12,7 @@ import com.example.carnotaturismo.fragments.FavoritosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.Rutas
 import com.example.carnotaturismo.util.ImageHelper
+import com.example.carnotaturismo.util.resolveString
 
 /**
  * Adaptador para el RecyclerView de lugares (ubicaciones).
@@ -50,7 +51,7 @@ class FavoritosRutaAdapter(private var ruta: List<Rutas>)
         val ctx = holder.itemView.context
         ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
 
-        holder.titulo.text = currentItem.titulo
+        holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(FavoritosFragmentDirections.actionFavoritosFragmentToItinerarioDetallesFragment(currentItem))
         }

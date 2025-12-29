@@ -15,6 +15,7 @@ import com.example.carnotaturismo.fragments.VerTodosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.Rutas
 import com.example.carnotaturismo.util.ImageHelper
+import com.example.carnotaturismo.util.resolveString
 
 /**
  * Adaptado para el recyclerView de itinerario lista
@@ -53,10 +54,10 @@ class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
         val ctx = holder.itemView.context
         ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
 
-        holder.titulo.text = currentItem.titulo
-        holder.duracion.text = currentItem.duracion
+        holder.titulo.text = ctx.resolveString(currentItem.titulo)
+        holder.duracion.text = ctx.resolveString(currentItem.duracion)
         holder.km.text = currentItem.km.toString()
-        holder.dificultad.text = currentItem.dificultad
+        holder.dificultad.text = ctx.resolveString(currentItem.dificultad)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(ItinerarioListaFragmentDirections.actionItinerarioListaFragmentToItinerarioDetallesFragment(currentItem))
         }

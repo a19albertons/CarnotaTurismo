@@ -47,36 +47,12 @@ CREATE TABLE IF NOT EXISTS "RutaLugar" (
 );
 
 -- ==========================================
--- INSERCIÓN DE DATOS DE MUESTRA
+-- INSERCIÓN DE DATOS DE MUESTRA (archivos externos)
 -- ==========================================
 
--- Insertar Lugares
--- ID 1: Monumento (Estará en Ruta 1 y Ruta 2)
-INSERT INTO "ubicaciones" VALUES (1, 'Hórreo de Carnota', 'Carnota Centro', 'Uno de los más grandes de Galicia', 'Monumento nacional construido en piedra...', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/horreo/mapa', 'Monumento', 'Visita obligada', 1);
-
--- ID 2: Playa (Estará en Ruta 2)
-INSERT INTO "ubicaciones" VALUES (2, 'Playa de Boca do Río', 'Costa de Carnota', 'Donde el río encuentra el mar', 'Hermosa playa con formaciones rocosas...', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/boca/mapa', 'Playa', 'Llevar protector solar', 0);
--- ID 3: Senderismo (Estará en Ruta 1)
-INSERT INTO "ubicaciones" VALUES (3, 'Monte Pindo', 'O Pindo', 'El Olimpo Celta', 'Formaciones graníticas con historia mitológica.', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/pindo/mapa', 'Senderismo', 'Calzado cómodo necesario', 1);
-
--- ID 4: Monumento (No asignado a ninguna ruta - Huérfano)
-INSERT INTO "ubicaciones" VALUES (4, 'Fervenza de Ézaro', 'Dumbría/Carnota', 'El río Xallas cae al mar', 'Espectacular cascada iluminada en verano.', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/ezaro/mapa', 'Monumento', 'Verificar horarios de iluminación', 0);
-
--- Insertar Rutas
--- ID 1: Ruta Compleja
-INSERT INTO "rutas" VALUES (1, 'Ruta de los Gigantes', '3 horas', 5.5, 'Media', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/ruta1/mapa', 'Recorrido por monumentos clave', 'Una ruta que une historia y naturaleza.', 'Llevar agua', 1);
-
--- ID 2: Ruta Simple
-INSERT INTO "rutas" VALUES (2, 'Ruta Costera Relax', '1 hora', 2.0, 'Baja', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/ruta2/mapa', 'Paseo por la orilla', 'Ideal para familias.', 'Marea baja recomendada', 0);
-
-
--- Insertar Relaciones (Tabla Cruzada)
--- Ruta 1 contiene Hórreo (1) y Monte Pindo (3)
-INSERT INTO "RutaLugar" VALUES (1, 1);
-INSERT INTO "RutaLugar" VALUES (1, 3);
-
--- Ruta 2 contiene Playa (2) y TAMBIÉN el Hórreo (1) (Escenario compartido)
-INSERT INTO "RutaLugar" VALUES (2, 2);
-INSERT INTO "RutaLugar" VALUES (2, 1);
+-- Incluimos los inserts desde archivos separados para facilitar mantenimiento y traducción
+.read inserts_ubicaciones.sql
+.read inserts_rutas.sql
+.read inserts_ruta_lugar.sql
 
 COMMIT;

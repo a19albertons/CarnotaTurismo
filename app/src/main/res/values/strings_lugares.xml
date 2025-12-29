@@ -1,0 +1,24 @@
+<resources>
+    <!-- Strings para lugares (clave-based) -->
+
+    <string name="lugar_1_titulo">Hórreo de Carnota</string>
+    <string name="lugar_1_leyenda">Uno de los más grandes de Galicia</string>
+    <string name="lugar_1_descripcion">Monumento nacional construido en piedra...</string>
+    <string name="lugar_1_importante">Visita obligada</string>
+
+    <string name="lugar_2_titulo">Playa de Boca do Río</string>
+    <string name="lugar_2_leyenda">Donde el río encuentra el mar</string>
+    <string name="lugar_2_descripcion">Hermosa playa con formaciones rocosas...</string>
+    <string name="lugar_2_importante">Llevar protector solar</string>
+
+    <string name="lugar_3_titulo">Monte Pindo</string>
+    <string name="lugar_3_leyenda">El Olimpo Celta</string>
+    <string name="lugar_3_descripcion">Formaciones graníticas con historia mitológica.</string>
+    <string name="lugar_3_importante">Calzado cómodo necesario</string>
+
+    <string name="lugar_4_titulo">Fervenza de Ézaro</string>
+    <string name="lugar_4_leyenda">El río Xallas cae al mar</string>
+    <string name="lugar_4_descripcion">Espectacular cascada iluminada en verano.</string>
+    <string name="lugar_4_importante">Verificar horarios de iluminación</string>
+
+</resources>

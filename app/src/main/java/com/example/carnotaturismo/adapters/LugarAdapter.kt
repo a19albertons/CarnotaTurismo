@@ -13,6 +13,7 @@ import com.example.carnotaturismo.fragments.LugarFragmentDirections
 import com.example.carnotaturismo.fragments.VerTodosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.util.ImageHelper
+import com.example.carnotaturismo.util.resolveString
 
 /**
  * Adaptador para el RecyclerView de lugares (ubicaciones).
@@ -49,8 +50,8 @@ class LugarAdapter(private var lugares: List<Lugar>)
         val ctx = holder.itemView.context
         ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
 
-        holder.titulo.text = currentItem.titulo
-        holder.ubicacion.text = currentItem.ubicacion
+        holder.titulo.text = ctx.resolveString(currentItem.titulo)
+        holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(LugarFragmentDirections.actionLugarFragmentToLugarDetallesFragment(currentItem))
         }

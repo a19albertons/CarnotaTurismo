@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.databinding.FragmentMapaGeneralBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
+import com.example.carnotaturismo.util.resolveString
 import kotlin.getValue
 
 /**
@@ -35,14 +36,14 @@ class MapaGeneralFragment : Fragment() {
         var lugares = model.lugares.value ?: emptyList()
 
         // Declaramos el listado
-        binding.tituloUbicaciones.text = lugares.joinToString(separator = "\n") { it.titulo }
+        binding.tituloUbicaciones.text = lugares.joinToString(separator = "\n") { requireContext().resolveString(it.titulo) }
 
         // Mostrar imagen de pruebas (por si la BD de testing no tiene imágenes reales)
         com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), null, binding.fotoMapaGeneral)
 
         // Observamos cambios
         model.lugares.observe(viewLifecycleOwner) { lista ->
-            binding.tituloUbicaciones.text = lista.joinToString(separator = "\n") { it.titulo }
+            binding.tituloUbicaciones.text = lista.joinToString(separator = "\n") { requireContext().resolveString(it.titulo) }
         }
 
 

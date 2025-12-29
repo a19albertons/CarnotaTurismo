@@ -17,4 +17,7 @@
     <string name="turismo_carnota">Turismo Carnota</string>
     <string name="sobre_info">Imágenes extraídas de Internet.\nMapas extraídos de Google Maps.\nMapa puntos azules construcción propia desde Google maps.\nAplicación desarrollada por....</string>
 
+    <!-- Errores -->
+    <string name="string_no_encontrada">Texto no encontrado disculpe las molestias</string>
+
 </resources>

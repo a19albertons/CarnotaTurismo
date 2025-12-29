@@ -12,6 +12,7 @@ import com.example.carnotaturismo.fragments.InicioFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 import androidx.navigation.findNavController
 import com.example.carnotaturismo.util.ImageHelper
+import com.example.carnotaturismo.util.resolveString
 
 
 /**
@@ -42,8 +43,8 @@ class InicioHorizontalAdapter(private var lista: List<Lugar>)
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
         val ctx = holder.itemView.context
         ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
-        holder.ubicacion.text = currentItem.ubicacion
-        holder.titulo.text = currentItem.titulo
+        holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
+        holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(InicioFragmentDirections.actionInicioFragmentToLugarDetallesFragment(currentItem))
         }
