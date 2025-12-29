@@ -3,8 +3,11 @@ package com.example.carnotaturismo.model
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import com.example.carnotaturismo.dao.RutaLugarDAO
 import com.example.carnotaturismo.db.TurismoDatabase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 /**
  * Modelo de datos para el turismo app.
@@ -18,34 +21,55 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
     private val database = TurismoDatabase.getDatabase(application)
 
     /**
-     * DAO de lugares
+     * Repository que encapsula acceso a datos
      */
-    private val lugarDao = database.lugarDao()
-
-    /**
-     * DAO de rutas
-     */
-    private val rutasDao = database.rutaDao()
-
-    /**
-     * DAO RutaLugar
-     */
-    private val rutaLugar = database.rutaLugarDao()
-
-
+    private val repository = TurismoRepository(database)
 
     /**
      * Lista obtenible de lugares
      */
-    val lugares: LiveData<List<Lugar>> = lugarDao.obtenerTodos()
+    val lugares: LiveData<List<Lugar>> = repository.obtenerTodosLugares()
 
     /**
      * Lista obtenible de rutas
      */
-    val rutas: LiveData<List<Rutas>> = rutasDao.obtenerTodas()
+    val rutas: LiveData<List<Rutas>> = repository.obtenerTodasRutas()
+
+    /**
+     * Lista obtenible de rutas con lugares
+     */
+    val rutasConLugares: LiveData<List<RutasConLugares>> = repository.obtenerRutasConLugares()
+
 
     /**
      * Obtiene una ruta junto con sus lugares (relación N:N) por id.
      */
-    fun getRutaConLugares(id: Int): LiveData<RutasConLugares> = rutaLugar.obtenerRutaConLugares(id)
+    fun getRutaConLugares(id: Int): LiveData<RutasConLugares> = repository.obtenerRutaConLugares(id)
+
+    /**
+     * Obtiene los lugares favoritos.
+     */
+    fun obtenerLugaresFavoritos() : LiveData<List<Lugar>> = repository.obtenerLugaresFavoritos()
+
+    /**
+     * Obtiene las rutas favoritas.
+     */
+    fun obtenerRutasFavoritas() : LiveData<List<Rutas>> = repository.obtenerRutasFavoritas()
+
+    /**
+     * método para marcar/desmarcar favorito desde ViewModel
+     */
+    fun setFavoritoLugar(id: Int, valor: Int) {
+        // No bloqueamos el hilo principal
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.setFavoritoLugar(id, valor)
+        }
+    }
+
+    fun setFavoritoRuta(id: Int, valor: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.setFavoritoRuta(id, valor)
+        }
+    }
+
 }

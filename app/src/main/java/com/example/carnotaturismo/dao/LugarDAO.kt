@@ -17,4 +17,19 @@ interface LugarDAO {
      */
     @Query("select * from ubicaciones")
     fun obtenerTodos(): LiveData<List<Lugar>>
+
+    /**
+     * Obtiene los lugares favoritos.
+     *
+     * @return Lista de lugares favoritos.
+     */
+    @Query("select * from ubicaciones where favorito = 1")
+    fun obtenerLugaresFavoritos(): LiveData<List<Lugar>>
+
+    /**
+     * Marca o desmarca un lugar como favorito (0/1)
+     */
+    @Query("UPDATE ubicaciones SET favorito = :valor WHERE id = :id")
+    suspend fun setFavoritoLugar(id: Int, valor: Int)
+
 }

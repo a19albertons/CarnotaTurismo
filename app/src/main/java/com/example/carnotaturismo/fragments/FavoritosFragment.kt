@@ -5,56 +5,66 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.carnotaturismo.R
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.carnotaturismo.adapters.FavoritosLugarAdapter
+import com.example.carnotaturismo.adapters.FavoritosRutaAdapter
+import com.example.carnotaturismo.databinding.FragmentFavoritosBinding
+import com.example.carnotaturismo.model.TurismoAppModel
+import kotlin.getValue
 
 /**
- * A simple [Fragment] subclass.
- * Use the [FavoritosFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * Clase que representa el fragmento Favoritos
  */
 class FavoritosFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    // bindings
+    private var _binding: FragmentFavoritosBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    // modelo
+    private val model: TurismoAppModel by viewModels() {
+        ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favoritos, container, false)
+        _binding = FragmentFavoritosBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        // RecyclerView
+        // Lugares
+        val recyclerViewLugar = binding.RecyclerViewFavoritosLugar
+        recyclerViewLugar.layoutManager = LinearLayoutManager(requireContext())
+        val lugar = model.obtenerLugaresFavoritos().value?: emptyList()
+        val adapterLugar = FavoritosLugarAdapter(lugar)
+        recyclerViewLugar.adapter = adapterLugar
+
+        // Ruta
+        val recyclerViewRuta = binding.RecyclerViewFavoritosRutas
+        recyclerViewRuta.layoutManager = LinearLayoutManager(requireContext())
+        val ruta = model.obtenerRutasFavoritas().value?: emptyList()
+        val adapterRuta = FavoritosRutaAdapter(ruta)
+        recyclerViewRuta.adapter = adapterRuta
+
+        // Observar solo los favoritos y actualizar el adapter
+        model.obtenerLugaresFavoritos().observe(viewLifecycleOwner) { lista ->
+            adapterLugar.setDataLugar(lista)
+        }
+        model.obtenerRutasFavoritas().observe(viewLifecycleOwner) { lista ->
+            adapterRuta.setDataRuta(lista)
+        }
+
+
+
+
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FavoritosFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FavoritosFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
