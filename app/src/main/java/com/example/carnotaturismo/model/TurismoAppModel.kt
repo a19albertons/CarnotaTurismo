@@ -1,11 +1,14 @@
 package com.example.carnotaturismo.model
 
 import android.app.Application
+import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.carnotaturismo.dao.RutaLugarDAO
 import com.example.carnotaturismo.db.TurismoDatabase
+import com.example.carnotaturismo.repo.TurismoRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -69,6 +72,31 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
     fun setFavoritoRuta(id: Int, valor: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.setFavoritoRuta(id, valor)
+        }
+    }
+
+    // Preferencias basicas: idioma y musica
+    private val prefs = application.getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+    val idioma = MutableLiveData<String>().apply {
+        value = prefs.getString("pref_idioma", "Sistema") ?: "Sistema"
+    }
+
+    val musica = MutableLiveData<Boolean>().apply {
+        value = prefs.getBoolean("pref_musica", true)
+    }
+
+    fun setIdioma(nuevo: String) {
+        idioma.value = nuevo
+        viewModelScope.launch(Dispatchers.IO) {
+            prefs.edit().putString("pref_idioma", nuevo).apply()
+        }
+    }
+
+    fun setMusica(activo: Boolean) {
+        musica.value = activo
+        viewModelScope.launch(Dispatchers.IO) {
+            prefs.edit().putBoolean("pref_musica", activo).apply()
         }
     }
 

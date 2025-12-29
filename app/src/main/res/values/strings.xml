@@ -12,6 +12,9 @@
     <string name="favoritos">favoritos</string>
     <string name="mapa">mapa</string>
 
+    <!-- Apliccion normal -->
+    <string name="general">General</string>
+    <string name="turismo_carnota">Turismo Carnota</string>
+    <string name="sobre_info">Imágenes extraídas de Internet.\nMapas extraídos de Google Maps.\nMapa puntos azules construcción propia desde Google maps.\nAplicación desarrollada por....</string>
 
-    
 </resources>

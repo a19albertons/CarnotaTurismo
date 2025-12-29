@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".fragments.SobreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sobre"
+            android:textSize="24sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Yellow card with circular logo -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/amarillo"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/logoSobre"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo"
+                    android:background="@drawable/circle_bg"
+                    android:padding="16dp"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/app_name" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:text="Turismo Carnota"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+
+        </FrameLayout>
+
+        <!-- Info card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/amarillo"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textoSobre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans"
+                android:text="Imágenes extraídas de Internet.\nMapas extraídos de Google Maps\nMapa puntos azules construcción propia desde Google maps\nAplicacion desarrollada por...." />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Versión: "
+            android:fontFamily="@font/opensans" />
+
+    </LinearLayout>
+
+</ScrollView>
