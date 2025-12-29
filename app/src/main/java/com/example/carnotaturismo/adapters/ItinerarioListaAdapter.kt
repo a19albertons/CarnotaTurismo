@@ -20,8 +20,10 @@ import com.example.carnotaturismo.util.resolveString
 /**
  * Adaptado para el recyclerView de itinerario lista
  */
-class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
-    : RecyclerView.Adapter<ItinerarioListaAdapter.ViewHolder>() {
+class ItinerarioListaAdapter(
+    private var itineraios: List<Rutas>,
+    private val onToggleFavorito: (Rutas) -> Unit
+) : RecyclerView.Adapter<ItinerarioListaAdapter.ViewHolder>() {
 
     // 1. ViewHolder: Guarda las referencias a las vistas de cada fila
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -60,8 +62,20 @@ class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
         holder.km.text = currentItem.km.toString()
         // Mostrar la etiqueta localizable asociada al enum Dificultad
         holder.dificultad.text = ctx.getString(currentItem.dificultad.labelRes())
-        // Mostrar icono favorito según BD (solo lectura)
+        // Mostrar icono favorito según BD
         holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
+
+        // Toggle favorito en click
+        holder.favorito.setOnClickListener {
+            // Invierte el estado actual
+            val nuevo = !currentItem.favorito
+            currentItem.favorito = nuevo
+            // Actualiza el icono
+            holder.favorito.setImageResource(if (nuevo) R.drawable.favorito else R.drawable.no_favorito)
+            // Notifica al fragmento para que actualice la BD
+            onToggleFavorito(currentItem)
+        }
+
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(ItinerarioListaFragmentDirections.actionItinerarioListaFragmentToItinerarioDetallesFragment(currentItem))
         }

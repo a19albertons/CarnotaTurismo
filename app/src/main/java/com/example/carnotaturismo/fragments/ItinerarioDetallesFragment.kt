@@ -39,8 +39,20 @@ class ItinerarioDetallesFragment : Fragment() {
 
         // Actualizar UI
         binding.titulo.text = requireContext().resolveString(ruta.titulo)
-        // Mostrar icono favorito segun BD (solo lectura)
+        // Mostrar icono favorito segun BD
         binding.ivFavorito.setImageResource(if (ruta.favorito) R.drawable.favorito else R.drawable.no_favorito)
+
+        // Toggle favorito al pulsar (optimistic UI + persistir via ViewModel)
+        binding.ivFavorito.setOnClickListener {
+            // Invertir estado
+            val nuevo = !ruta.favorito
+            ruta.favorito = nuevo
+            // Actualizar icono
+            binding.ivFavorito.setImageResource(if (nuevo) R.drawable.favorito else R.drawable.no_favorito)
+            // Persistir cambio via ViewModel
+            model.setFavoritoRuta(ruta.id, if (nuevo) 1 else 0)
+        }
+
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
         com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), ruta.imagen, binding.fotoMapa)
         binding.leyenda.text = requireContext().resolveString(ruta.leyenda)

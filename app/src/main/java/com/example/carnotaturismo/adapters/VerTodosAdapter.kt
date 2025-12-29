@@ -17,8 +17,10 @@ import com.example.carnotaturismo.util.resolveString
 /**
  * Adaptador para el RecyclerView de Ver Todos.
  */
-class VerTodosAdapter(private val lugares: List<Lugar>)
-    : RecyclerView.Adapter<VerTodosAdapter.ViewHolder>() {
+class VerTodosAdapter(
+    private val lugares: List<Lugar>,
+    private val onToggleFavorito: (Lugar) -> Unit
+) : RecyclerView.Adapter<VerTodosAdapter.ViewHolder>() {
 
     // 1. ViewHolder: Guarda las referencias a las vistas de cada fila
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -46,8 +48,20 @@ class VerTodosAdapter(private val lugares: List<Lugar>)
 
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
-        // Mostrar icono favorito segun BD (solo lectura)
+        // Mostrar icono favorito segun BD
         holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
+
+        // Toggle favorito en click
+        holder.favorito.setOnClickListener {
+            // Invierte el estado actual
+            val nuevo = !currentItem.favorito
+            currentItem.favorito = nuevo
+            // Actualiza el icono
+            holder.favorito.setImageResource(if (nuevo) R.drawable.favorito else R.drawable.no_favorito)
+            // Notifica al fragmento para que actualice la BD
+            onToggleFavorito(currentItem)
+        }
+
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(VerTodosFragmentDirections.actionVerTodosFragmentToLugarDetallesFragment(currentItem))
         }

@@ -44,13 +44,18 @@ class InicioFragment : Fragment() {
         recyclerViewVertical.layoutManager = LinearLayoutManager(requireContext())
 
         // Inicializar adapter con lista vacía y observar cambios en LiveData
-        val adapter = InicioVerticalAdapter(TipoUbicacion.entries.toTypedArray(), emptyList()) { lista ->
-            // Navegar desde el fragment (usando Safe Args) para mantener el BottomNavigationView sincronizado
-            // La opción que intenta aplicar democracia
-            val array = lista.toTypedArray()
-            val action = InicioFragmentDirections.actionInicioFragmentToVerTodosFragment(array, lista[0].tipo)
-            findNavController().navigate(action)
-        }
+        val adapter = InicioVerticalAdapter(
+            TipoUbicacion.entries.toTypedArray(),
+            emptyList(),
+            { lista ->
+                // Navegar desde el fragment (usando Safe Args) para mantener el BottomNavigationView sincronizado
+                val array = lista.toTypedArray()
+                val action = InicioFragmentDirections.actionInicioFragmentToVerTodosFragment(array, lista[0].tipo)
+                findNavController().navigate(action)
+            },
+            // Callback para toggle favorito desde los elementos del horizontal
+            { lugar -> model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0) }
+        )
         recyclerViewVertical.adapter = adapter
 
         // Observar cambios en LiveData y actualizar el adapter

@@ -46,8 +46,11 @@ class VerTodosFragment : Fragment() {
         // Configura el layout
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // Inicializar adapter con la lista que recibe
-        val adapter = VerTodosAdapter(lista.toList())
+        // Inicializar adapter con la lista que recibe y pasar callback para actualizar favorito
+        val adapter = VerTodosAdapter(lista.toList()) { lugar ->
+            // Llamada al ViewModel para actualizar BD (1 = favorito, 0 = no)
+            model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0)
+        }
         recyclerView.adapter = adapter
 
         // Texto tipo (resuelve clave de recurso o texto literal)

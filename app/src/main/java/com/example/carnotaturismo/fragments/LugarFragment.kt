@@ -43,7 +43,9 @@ class LugarFragment : Fragment() {
 
         // Inicializar adapter con lista vacía y observar cambios en LiveData
         val listaLugares = model.lugares.value ?: emptyList()
-        val adapter = LugarAdapter(listaLugares)
+        val adapter = LugarAdapter(listaLugares) { lugar ->
+            model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0)
+        }
         recyclerView.adapter = adapter
 
         // Observar cambios en LiveData y actualizar el adapter

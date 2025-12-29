@@ -36,10 +36,13 @@ class ItinerarioListaFragment : Fragment() {
         // Recycler View
         val recyclerView = binding.RecyclerViewItinerarioLista
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        // Inicializar adapter con lista vacía y observar cambios en LiveData
         val listaRutas = model.rutas.value?: emptyList()
         val adapter = ItinerarioListaAdapter(
             itineraios = listaRutas
-        )
+        ) { ruta ->
+            model.setFavoritoRuta(ruta.id, if (ruta.favorito) 1 else 0)
+        }
 
         recyclerView.adapter = adapter
 

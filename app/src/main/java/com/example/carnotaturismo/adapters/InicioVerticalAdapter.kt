@@ -19,8 +19,10 @@ import com.example.carnotaturismo.model.TipoUbicacion
 class InicioVerticalAdapter(
     private var tipos: Array<TipoUbicacion>,
     private var model: List<Lugar>,
-    private val onVerTodos: (List<Lugar>) -> Unit
+    private val onVerTodos: (List<Lugar>) -> Unit,
+    private val onToggleFavorito: (Lugar) -> Unit
 ) : RecyclerView.Adapter<InicioVerticalAdapter.ViewHolder>() {
+
 
 
     // 1. ViewHolder: Guarda las referencias a las vistas de cada fila
@@ -57,8 +59,8 @@ class InicioVerticalAdapter(
             holder.RecyclerViewHorizontal.setHasFixedSize(true)
         }
 
-        // Asignar el adaptador (filtrado por tipo)
-        holder.RecyclerViewHorizontal.adapter = InicioHorizontalAdapter(model.filter { it.tipo == currentItem })
+        // Asignar el adaptador (filtrado por tipo), pasando el callback para favoritos
+        holder.RecyclerViewHorizontal.adapter = InicioHorizontalAdapter(model.filter { it.tipo == currentItem }, onToggleFavorito)
 
         // La opcion que intento aplicar dialogo democratico
         holder.verTodos.setOnClickListener {

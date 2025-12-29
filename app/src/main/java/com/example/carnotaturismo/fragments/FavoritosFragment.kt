@@ -40,15 +40,21 @@ class FavoritosFragment : Fragment() {
         // Lugares
         val recyclerViewLugar = binding.RecyclerViewFavoritosLugar
         recyclerViewLugar.layoutManager = LinearLayoutManager(requireContext())
+        // Inicializar adapter con lista de favoritos
         val lugar = model.obtenerLugaresFavoritos().value?: emptyList()
-        val adapterLugar = FavoritosLugarAdapter(lugar)
+        val adapterLugar = FavoritosLugarAdapter(lugar) { lugarItem ->
+            model.setFavoritoLugar(lugarItem.id, if (lugarItem.favorito) 1 else 0)
+        }
         recyclerViewLugar.adapter = adapterLugar
 
         // Ruta
         val recyclerViewRuta = binding.RecyclerViewFavoritosRutas
         recyclerViewRuta.layoutManager = LinearLayoutManager(requireContext())
+        // Inicializar adapter con lista de favoritos
         val ruta = model.obtenerRutasFavoritas().value?: emptyList()
-        val adapterRuta = FavoritosRutaAdapter(ruta)
+        val adapterRuta = FavoritosRutaAdapter(ruta) { rutaItem ->
+            model.setFavoritoRuta(rutaItem.id, if (rutaItem.favorito) 1 else 0)
+        }
         recyclerViewRuta.adapter = adapterRuta
 
         // Observar solo los favoritos y actualizar el adapter

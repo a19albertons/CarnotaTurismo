@@ -18,8 +18,10 @@ import com.example.carnotaturismo.util.resolveString
 /**
  * Adaptador para el RecyclerView de lugares (ubicaciones).
  */
-class LugarAdapter(private var lugares: List<Lugar>)
-    : RecyclerView.Adapter<LugarAdapter.ViewHolder>() {
+class LugarAdapter(
+    private var lugares: List<Lugar>,
+    private val onToggleFavorito: (Lugar) -> Unit
+) : RecyclerView.Adapter<LugarAdapter.ViewHolder>() {
 
     // 1. ViewHolder: Guarda las referencias a las vistas de cada fila
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -53,8 +55,20 @@ class LugarAdapter(private var lugares: List<Lugar>)
 
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
-        // Mostrar icono favorito según el valor en la BD (solo lectura por ahora)
+        // Mostrar icono favorito según el valor en la BD
         holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
+
+        // Toggle favorito en click
+        holder.favorito.setOnClickListener {
+            // Invierte el estado actual
+            val nuevo = !currentItem.favorito
+            currentItem.favorito = nuevo
+            // Actualiza el icono
+            holder.favorito.setImageResource(if (nuevo) R.drawable.favorito else R.drawable.no_favorito)
+            // Notifica al fragmento para que actualice la BD
+            onToggleFavorito(currentItem)
+        }
+
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(LugarFragmentDirections.actionLugarFragmentToLugarDetallesFragment(currentItem))
         }
