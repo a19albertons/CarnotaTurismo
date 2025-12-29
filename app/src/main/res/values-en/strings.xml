@@ -30,4 +30,27 @@
     <string name="tipo_senderismo">Hiking</string>
     <string name="tipo_playa">Beach</string>
 
+    <!-- UI labels added during i18n pass -->
+    <string name="itinerario">Itinerary</string>
+    <string name="version_label">Version: </string>
+    <string name="ver_todos">See all</string>
+    <string name="idiomas_label">Languages:</string>
+    <string name="musica_label">Music:</string>
+    <string name="guardar">Save</string>
+    <string name="label_leyenda">Legend</string>
+    <string name="label_lugares_a_visitar">Places to visit</string>
+    <string name="label_descripcion">Description</string>
+    <string name="label_importante">Important</string>
+    <string name="mapa_general">General Map</string>
+
+    <!-- Idiomas: display names for the selector -->
+    <string-array name="idiomas">
+        <item>System</item>
+        <item>Spanish</item>
+        <item>Galician</item>
+        <item>English</item>
+    </string-array>
+
+    <string name="ajustes_guardados">Settings saved</string>
+
 </resources>

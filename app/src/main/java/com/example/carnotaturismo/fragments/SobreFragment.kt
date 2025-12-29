@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.fragment.app.viewModels
 import com.example.carnotaturismo.databinding.FragmentSobreBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
+import com.example.carnotaturismo.R
 
 /**
  * Clase que representa el fragmento Sobre
@@ -31,7 +32,8 @@ class SobreFragment : Fragment() {
         val view = binding.root
 
         // Mostrar versión
-        binding.versionText.text = "Versión: 1.0.5"
+
+        binding.versionText.text = getString(R.string.version_label) + "1.0.5"
 
 
         return view

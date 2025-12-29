@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.databinding.FragmentAjustesBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.services.MusicService
+import com.example.carnotaturismo.R
 
 /**
  * Clase que representa el fragmento Ajustes
@@ -34,8 +35,8 @@ class AjustesFragment : Fragment() {
         _binding = FragmentAjustesBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        // Spinner idiomas
-        val idiomas = listOf("Sistema", "Español", "Galego", "English")
+        // Spinner idiomas (cargado desde recursos para i18n)
+        val idiomas = resources.getStringArray(R.array.idiomas)
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, idiomas)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinnerIdioma.adapter = adapter
@@ -66,7 +67,7 @@ class AjustesFragment : Fragment() {
             val musica = binding.switchMusica.isChecked
             model.setIdioma(seleccionado)
             model.setMusica(musica)
-            Toast.makeText(requireContext(), "Ajustes guardados", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.ajustes_guardados), Toast.LENGTH_SHORT).show()
         }
 
         return view

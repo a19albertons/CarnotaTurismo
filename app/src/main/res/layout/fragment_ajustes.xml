@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="General"
+                android:text="@string/general"
                 android:textSize="24sp"
                 android:fontFamily="@font/montserrat_medium"
                 android:layout_marginBottom="16dp" />
@@ -40,7 +40,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Idiomas:"
+                    android:text="@string/idiomas_label"
                     android:fontFamily="@font/opensans" />
 
                 <Spinner
@@ -62,7 +62,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Música:"
+                    android:text="@string/musica_label"
                     android:fontFamily="@font/opensans" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
@@ -91,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="Guardar"
+            android:text="@string/guardar"
             android:backgroundTint="@color/naranja"
             android:textColor="@color/white"
             android:paddingLeft="24dp"

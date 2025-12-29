@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:textSize="16sp"
-        android:text="Leyenda"
+        android:text="@string/label_leyenda"
         />
     <TextView
         android:id="@+id/leyenda"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:textSize="16sp"
-        android:text="Descripcion"
+        android:text="@string/label_descripcion"
         />
     <TextView
         android:id="@+id/descripcion"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:textSize="16sp"
-        android:text="Importante"
+        android:text="@string/label_importante"
         />
     <TextView
         android:id="@+id/importante"

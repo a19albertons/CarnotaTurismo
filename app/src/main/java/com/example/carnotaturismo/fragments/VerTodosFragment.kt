@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carnotaturismo.adapters.VerTodosAdapter
 import com.example.carnotaturismo.databinding.FragmentVerTodosBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
+import com.example.carnotaturismo.util.resolveString
 import kotlin.getValue
 
 /**
@@ -49,8 +50,8 @@ class VerTodosFragment : Fragment() {
         val adapter = VerTodosAdapter(lista.toList())
         recyclerView.adapter = adapter
 
-        // Texto tipo
-        binding.tipo.text = args.tipo.toString()
+        // Texto tipo (resuelve clave de recurso o texto literal)
+        binding.tipo.text = requireContext().getString(args.tipo.labelRes())
 
         return view
     }

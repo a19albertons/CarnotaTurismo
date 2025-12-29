@@ -14,7 +14,7 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/montserrat_medium"
         android:textSize="20sp"
-        android:text="Itinerario"
+        android:text="@string/itinerario"
 
         />
     <androidx.recyclerview.widget.RecyclerView
