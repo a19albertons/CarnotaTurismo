@@ -3,6 +3,7 @@ package com.example.carnotaturismo
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.content.Intent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,6 +13,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.lifecycle.ViewModelProvider
+import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.services.MusicService
 
 /**
  * Actividad principal de la aplicación.
@@ -79,6 +83,13 @@ class MainActivity : AppCompatActivity() {
         // Si el usuario re-selecciona una pestaña ya seleccionada, hacer pop hasta esa pantalla (comportamiento esperado)
         bottomNav.setOnItemReselectedListener { item ->
             navController.popBackStack(item.itemId, false)
+        }
+
+        // Observa la preferencia de música al arrancar la app y arranca/para el servicio según corresponda
+        val appModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(TurismoAppModel::class.java)
+        appModel.musica.observe(this) { activo ->
+            val intent = Intent(this, MusicService::class.java)
+            if (activo) startService(intent) else stopService(intent)
         }
     }
 

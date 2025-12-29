@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.content.Intent
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.databinding.FragmentAjustesBinding
 import com.example.carnotaturismo.model.TurismoAppModel
+import com.example.carnotaturismo.services.MusicService
 
 /**
  * Clase que representa el fragmento Ajustes
@@ -44,11 +46,21 @@ class AjustesFragment : Fragment() {
             binding.spinnerIdioma.setSelection(pos)
         }
 
+        // Observa cambios en la preferencia de música y arranca/para el servicio
         model.musica.observe(viewLifecycleOwner) { activo ->
             binding.switchMusica.isChecked = activo
+            val intent = Intent(requireContext(), MusicService::class.java)
+            if (activo) {
+                requireContext().startService(intent)
+            } else {
+                requireContext().stopService(intent)
+            }
         }
 
-        // Guardar
+        // Descomentar si que quiere que el ajuste de musica se cambie de forma independiente al boton de guardar
+        // binding.switchMusica.setOnCheckedChangeListener { _, isChecked -> model.setMusica(isChecked) }
+
+        // Guardar ajustes (idioma + música)
         binding.botonGuardar.setOnClickListener {
             val seleccionado = binding.spinnerIdioma.selectedItem.toString()
             val musica = binding.switchMusica.isChecked

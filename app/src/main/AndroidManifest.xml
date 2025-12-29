@@ -20,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Servicio que reproduce música de fondo -->
+        <service
+            android:name=".services.MusicService"
+            android:exported="false" />
+
     </application>
 
 </manifest>
