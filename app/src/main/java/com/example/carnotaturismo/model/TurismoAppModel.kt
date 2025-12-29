@@ -3,6 +3,7 @@ package com.example.carnotaturismo.model
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import com.example.carnotaturismo.dao.RutaLugarDAO
 import com.example.carnotaturismo.db.TurismoDatabase
 
 /**
@@ -27,6 +28,13 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
     private val rutasDao = database.rutaDao()
 
     /**
+     * DAO RutaLugar
+     */
+    private val rutaLugar = database.rutaLugarDao()
+
+
+
+    /**
      * Lista obtenible de lugares
      */
     val lugares: LiveData<List<Lugar>> = lugarDao.obtenerTodos()
@@ -35,4 +43,9 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
      * Lista obtenible de rutas
      */
     val rutas: LiveData<List<Rutas>> = rutasDao.obtenerTodas()
+
+    /**
+     * Obtiene una ruta junto con sus lugares (relación N:N) por id.
+     */
+    fun getRutaConLugares(id: Int): LiveData<RutasConLugares> = rutaLugar.obtenerRutaConLugares(id)
 }
