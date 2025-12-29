@@ -16,7 +16,7 @@ data class Rutas(
     val titulo: String,
     val duracion: String,
     val km: Double,
-    val dificultad: String,
+    val dificultad: Dificultad,
     val imagen: String,
     val imagenMapa: String,
     val imagenMapaEnlace: String,

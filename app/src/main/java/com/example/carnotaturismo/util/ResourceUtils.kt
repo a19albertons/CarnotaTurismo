@@ -12,7 +12,14 @@ import com.example.carnotaturismo.R
 
 fun Context.resolveString(value: String?): String {
     if (value.isNullOrBlank()) return ""
-    // Intenta buscar un recurso de cadena con este nombre
-    val resId = resources.getIdentifier(value, "string", packageName)
-    return if (resId != 0) getString(resId) else getString(R.string.string_no_encontrada)
+    // Heurística: si el valor parece una clave de recurso (solo minúsculas, números y guiones bajos)
+    // intentamos resolver la resource; si no, consideramos que es un texto literal y lo devolvemos tal cual.
+    val resourceNamePattern = Regex("^[a-z0-9_]+$")
+    return if (resourceNamePattern.matches(value)) {
+        val resId = resources.getIdentifier(value, "string", packageName)
+        if (resId != 0) getString(resId) else getString(R.string.string_no_encontrada)
+    } else {
+        // texto literal (p. ej. "Carnota Centro"); devolver tal cual
+        value
+    }
 }

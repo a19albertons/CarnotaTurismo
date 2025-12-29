@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.carnotaturismo.dao.LugarDAO
 import com.example.carnotaturismo.dao.RutaLugarDAO
 import com.example.carnotaturismo.dao.RutasDAO
@@ -15,6 +16,7 @@ import com.example.carnotaturismo.model.RutaLugar
  * Base de datos de turismo.
  */
 @Database(entities = [Lugar::class, Rutas::class, RutaLugar::class], version = 1, exportSchema = false)
+@TypeConverters(com.example.carnotaturismo.model.Convertidor::class)
 abstract class TurismoDatabase : RoomDatabase() {
     /**
      * Obtiene el DAO para la entidad Lugar.

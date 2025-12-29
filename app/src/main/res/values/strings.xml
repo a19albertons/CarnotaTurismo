@@ -20,4 +20,14 @@
     <!-- Errores -->
     <string name="string_no_encontrada">Texto no encontrado disculpe las molestias</string>
 
+    <!-- Etiquetas de dificultad -->
+    <string name="dificultad_baja">Baja</string>
+    <string name="dificultad_media">Media</string>
+    <string name="dificultad_alta">Alta</string>
+
+    <!-- Etiquetas para tipos de ubicacion -->
+    <string name="tipo_monumento">Monumento</string>
+    <string name="tipo_senderismo">Senderismo</string>
+    <string name="tipo_playa">Playa</string>
+
 </resources>

@@ -48,7 +48,8 @@ class InicioVerticalAdapter(
     // 3. Reemplaza el contenido de una vista (une los datos a la vista)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = tipos[position]
-        holder.tipoUbicacion.text = currentItem.name
+        // Mostrar la etiqueta localizable del tipo de ubicación
+        holder.tipoUbicacion.text = holder.itemView.context.getString(currentItem.labelRes())
 
         // Asegurar que el RecyclerView horizontal tenga un LayoutManager para poder hacer el layout
         if (holder.RecyclerViewHorizontal.layoutManager == null) {

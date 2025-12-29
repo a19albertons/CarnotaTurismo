@@ -57,7 +57,8 @@ class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.duracion.text = ctx.resolveString(currentItem.duracion)
         holder.km.text = currentItem.km.toString()
-        holder.dificultad.text = ctx.resolveString(currentItem.dificultad)
+        // Mostrar la etiqueta localizable asociada al enum Dificultad
+        holder.dificultad.text = ctx.getString(currentItem.dificultad.labelRes())
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(ItinerarioListaFragmentDirections.actionItinerarioListaFragmentToItinerarioDetallesFragment(currentItem))
         }
