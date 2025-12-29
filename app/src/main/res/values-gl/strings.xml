@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Turismo Carnota</string>
+    <string name="hello_blank_fragment">Fragmento en branco</string>
+
+    <!-- Menus -->
+    <string name="ajustes">axustes</string>
+    <string name="sobre">Acerca de</string>
+    <string name="inicio">inicio</string>
+    <string name="ubicaciones">Localizacións</string>
+    <string name="rutas">rutas</string>
+    <string name="favoritos">favoritos</string>
+    <string name="mapa">mapa</string>
+
+    <!-- Application general -->
+    <string name="general">Xeral</string>
+    <string name="turismo_carnota">Turismo Carnota</string>
+    <string name="sobre_info">Imaxes extraídas de Internet.\nMapas extraídos de Google Maps.\nMapa de puntos azuis construído a partir de Google Maps.\nAplicación desenvolvida por....</string>
+
+    <!-- Errors -->
+    <string name="string_no_encontrada">Texto non atopado. Desculpe as molestias</string>
+
+    <!-- Difficulty labels -->
+    <string name="dificultad_baja">Baixa</string>
+    <string name="dificultad_media">Media</string>
+    <string name="dificultad_alta">Alta</string>
+
+    <!-- Location type labels -->
+    <string name="tipo_monumento">Monumento</string>
+    <string name="tipo_senderismo">Senderismo</string>
+    <string name="tipo_playa">Praia</string>
+
+</resources>

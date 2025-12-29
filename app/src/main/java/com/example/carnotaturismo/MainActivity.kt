@@ -91,6 +91,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MusicService::class.java)
             if (activo) startService(intent) else stopService(intent)
         }
+
+        // Observar cambios de idioma y recrear sólo si cambia realmente
+        appModel.idioma.observe(this) { nuevo ->
+            val currentTags = androidx.appcompat.app.AppCompatDelegate.getApplicationLocales().toLanguageTags()
+            val newTag = com.example.carnotaturismo.util.LocaleHelper.tagForName(nuevo) ?: ""
+            if (newTag != currentTags) {
+                recreate()
+            }
+        }
     }
 
     /**

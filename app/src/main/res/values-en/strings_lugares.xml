@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Location strings (key-based) -->
+
+    <string name="lugar_1_titulo">Carnota Hórreo</string>
+    <string name="lugar_1_leyenda">One of the largest in Galicia</string>
+    <string name="lugar_1_descripcion">National monument built in stone...</string>
+    <string name="lugar_1_importante">A must-visit</string>
+
+    <string name="lugar_2_titulo">Boca do Río Beach</string>
+    <string name="lugar_2_leyenda">Where the river meets the sea</string>
+    <string name="lugar_2_descripcion">Beautiful beach with rocky formations...</string>
+    <string name="lugar_2_importante">Bring sunscreen</string>
+
+    <string name="lugar_3_titulo">Monte Pindo</string>
+    <string name="lugar_3_leyenda">The Celtic Olympus</string>
+    <string name="lugar_3_descripcion">Granite formations with mythological history.</string>
+    <string name="lugar_3_importante">Comfortable shoes required</string>
+
+    <string name="lugar_4_titulo">Ézaro Waterfall</string>
+    <string name="lugar_4_leyenda">The Xallas river falls into the sea</string>
+    <string name="lugar_4_descripcion">Spectacular waterfall lit during summer.</string>
+    <string name="lugar_4_importante">Check lighting times</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Route strings (key-based) -->
+
+    <string name="ruta_1_titulo">Giants Route</string>
+    <string name="ruta_1_duracion">3 hours</string>
+    <string name="ruta_1_dificultad">Medium</string>
+    <string name="ruta_1_leyenda">Route through key monuments</string>
+    <string name="ruta_1_descripcion">A route that combines history and nature.</string>
+    <string name="ruta_1_importante">Bring water</string>
+
+    <string name="ruta_2_titulo">Coastal Relax Route</string>
+    <string name="ruta_2_duracion">1 hour</string>
+    <string name="ruta_2_dificultad">Low</string>
+    <string name="ruta_2_leyenda">Walk along the shore</string>
+    <string name="ruta_2_descripcion">Ideal for families.</string>
+    <string name="ruta_2_importante">Low tide recommended</string>
+
+</resources>

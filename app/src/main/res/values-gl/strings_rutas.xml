@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strings para rutas (clave-based) -->
+
+    <string name="ruta_1_titulo">Ruta dos Xigantes</string>
+    <string name="ruta_1_duracion">3 horas</string>
+    <string name="ruta_1_dificultad">Media</string>
+    <string name="ruta_1_leyenda">Percorrido por monumentos chave</string>
+    <string name="ruta_1_descripcion">Unha ruta que une historia e natureza.</string>
+    <string name="ruta_1_importante">Levar auga</string>
+
+    <string name="ruta_2_titulo">Ruta Costeira Relax</string>
+    <string name="ruta_2_duracion">1 hora</string>
+    <string name="ruta_2_dificultad">Baixa</string>
+    <string name="ruta_2_leyenda">Paseo pola beira</string>
+    <string name="ruta_2_descripcion">Ideal para familias.</string>
+    <string name="ruta_2_importante">Marea baixa recomendada</string>
+
+</resources>

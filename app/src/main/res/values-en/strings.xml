@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Carnota Tourism</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Menus -->
+    <string name="ajustes">Settings</string>
+    <string name="sobre">About</string>
+    <string name="inicio">Home</string>
+    <string name="ubicaciones">Locations</string>
+    <string name="rutas">Routes</string>
+    <string name="favoritos">Favorites</string>
+    <string name="mapa">Map</string>
+
+    <!-- Application general -->
+    <string name="general">General</string>
+    <string name="turismo_carnota">Carnota Tourism</string>
+    <string name="sobre_info">Images taken from the Internet.\nMaps from Google Maps.\nBlue point map built from Google Maps.\nApplication developed by....</string>
+
+    <!-- Errors -->
+    <string name="string_no_encontrada">Text not found, sorry for the inconvenience</string>
+
+    <!-- Difficulty labels -->
+    <string name="dificultad_baja">Low</string>
+    <string name="dificultad_media">Medium</string>
+    <string name="dificultad_alta">High</string>
+
+    <!-- Location type labels -->
+    <string name="tipo_monumento">Monument</string>
+    <string name="tipo_senderismo">Hiking</string>
+    <string name="tipo_playa">Beach</string>
+
+</resources>

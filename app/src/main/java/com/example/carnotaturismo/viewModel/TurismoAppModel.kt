@@ -11,6 +11,7 @@ import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.Rutas
 import com.example.carnotaturismo.model.RutasConLugares
 import com.example.carnotaturismo.repo.TurismoRepository
+import com.example.carnotaturismo.util.LocaleHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -90,6 +91,10 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
 
     fun setIdioma(nuevo: String) {
         idioma.value = nuevo
+        // Aplicar locale inmediatamente en el hilo de UI
+        viewModelScope.launch(Dispatchers.Main) {
+            LocaleHelper.applyLocaleName(nuevo)
+        }
         viewModelScope.launch(Dispatchers.IO) {
             prefs.edit().putString("pref_idioma", nuevo).apply()
         }
