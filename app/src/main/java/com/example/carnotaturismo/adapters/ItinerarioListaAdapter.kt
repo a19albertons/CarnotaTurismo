@@ -31,6 +31,7 @@ class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
         val km: TextView = itemView.findViewById(R.id.km)
         val dificultad: TextView = itemView.findViewById(R.id.dificultad)
         val tarjeta: View = itemView.findViewById(R.id.tarjeta)
+        val favorito: ImageView = itemView.findViewById(R.id.iv_favorito)
     }
 
     // Permite actualizar los datos y refrescar la vista
@@ -59,6 +60,8 @@ class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
         holder.km.text = currentItem.km.toString()
         // Mostrar la etiqueta localizable asociada al enum Dificultad
         holder.dificultad.text = ctx.getString(currentItem.dificultad.labelRes())
+        // Mostrar icono favorito según BD (solo lectura)
+        holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(ItinerarioListaFragmentDirections.actionItinerarioListaFragmentToItinerarioDetallesFragment(currentItem))
         }

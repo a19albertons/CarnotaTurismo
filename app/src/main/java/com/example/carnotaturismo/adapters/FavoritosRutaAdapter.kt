@@ -25,6 +25,7 @@ class FavoritosRutaAdapter(private var ruta: List<Rutas>)
         val imagen: ImageView = itemView.findViewById(R.id.foto_inicio)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val tarjeta: View = itemView.findViewById(R.id.tarjeta)
+        val favorito: ImageView = itemView.findViewById(R.id.iv_favorito)
     }
 
 
@@ -52,6 +53,8 @@ class FavoritosRutaAdapter(private var ruta: List<Rutas>)
         ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
 
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
+        // Mostrar icono favorito segun BD (solo lectura)
+        holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(FavoritosFragmentDirections.actionFavoritosFragmentToItinerarioDetallesFragment(currentItem))
         }

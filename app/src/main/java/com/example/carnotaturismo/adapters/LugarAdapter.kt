@@ -27,6 +27,7 @@ class LugarAdapter(private var lugares: List<Lugar>)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val ubicacion: TextView = itemView.findViewById(R.id.ubicacion)
         val tarjeta: View = itemView.findViewById(R.id.tarjeta)
+        val favorito: ImageView = itemView.findViewById(R.id.iv_favorito)
     }
 
     // Permite actualizar los datos y refrescar la vista
@@ -52,6 +53,8 @@ class LugarAdapter(private var lugares: List<Lugar>)
 
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
+        // Mostrar icono favorito según el valor en la BD (solo lectura por ahora)
+        holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(LugarFragmentDirections.actionLugarFragmentToLugarDetallesFragment(currentItem))
         }

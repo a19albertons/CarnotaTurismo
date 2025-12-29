@@ -26,6 +26,7 @@ class VerTodosAdapter(private val lugares: List<Lugar>)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val ubicacion: TextView = itemView.findViewById(R.id.ubicacion)
         val tarjeta: View = itemView.findViewById(R.id.tarjeta)
+        val favorito: ImageView = itemView.findViewById(R.id.iv_favorito)
     }
 
     // 2. Crea nuevos ViewHolders (infla el layout de la fila)
@@ -45,6 +46,8 @@ class VerTodosAdapter(private val lugares: List<Lugar>)
 
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
         holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
+        // Mostrar icono favorito segun BD (solo lectura)
+        holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(VerTodosFragmentDirections.actionVerTodosFragmentToLugarDetallesFragment(currentItem))
         }

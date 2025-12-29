@@ -23,13 +23,30 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         >
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/opensans"
-            android:text=""
-            />
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            >
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans"
+                android:text=""/>
+
+            <ImageView
+                android:id="@+id/iv_favorito"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/no_favorito"
+                android:contentDescription="@string/favorito"/>
+        </LinearLayout>
         <TextView
             android:id="@+id/ubicacion"
             android:layout_width="wrap_content"

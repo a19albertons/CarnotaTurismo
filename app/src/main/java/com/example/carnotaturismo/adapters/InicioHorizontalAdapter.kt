@@ -28,6 +28,7 @@ class InicioHorizontalAdapter(private var lista: List<Lugar>)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val ubicacion: TextView = itemView.findViewById(R.id.ubicacion)
         val tarjeta: LinearLayout = itemView.findViewById(R.id.tarjeta)
+        val favorito: ImageView = itemView.findViewById(R.id.iv_favorito)
     }
 
     // 2. Crea nuevos ViewHolders (infla el layout de la fila)
@@ -45,6 +46,8 @@ class InicioHorizontalAdapter(private var lista: List<Lugar>)
         ImageHelper.setImageFromRef(ctx, currentItem.imagen, holder.imagen)
         holder.ubicacion.text = ctx.resolveString(currentItem.ubicacion)
         holder.titulo.text = ctx.resolveString(currentItem.titulo)
+        // Mostrar icono favorito segun BD (solo lectura)
+        holder.favorito.setImageResource(if (currentItem.favorito) R.drawable.favorito else R.drawable.no_favorito)
         holder.tarjeta.setOnClickListener {
             holder.itemView.findNavController().navigate(InicioFragmentDirections.actionInicioFragmentToLugarDetallesFragment(currentItem))
         }

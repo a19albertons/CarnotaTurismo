@@ -42,6 +42,7 @@
     <string name="label_descripcion">Descripción</string>
     <string name="label_importante">Importante</string>
     <string name="mapa_general">Mapa General</string>
+    <string name="favorito">Favorito</string>
 
     <!-- Idiomas: display names for the selector -->
     <string-array name="idiomas">

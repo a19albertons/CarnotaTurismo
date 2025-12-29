@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentItinerarioDetallesBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.util.resolveString
@@ -38,6 +39,8 @@ class ItinerarioDetallesFragment : Fragment() {
 
         // Actualizar UI
         binding.titulo.text = requireContext().resolveString(ruta.titulo)
+        // Mostrar icono favorito segun BD (solo lectura)
+        binding.ivFavorito.setImageResource(if (ruta.favorito) R.drawable.favorito else R.drawable.no_favorito)
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
         com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), ruta.imagen, binding.fotoMapa)
         binding.leyenda.text = requireContext().resolveString(ruta.leyenda)
