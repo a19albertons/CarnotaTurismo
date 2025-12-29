@@ -6,6 +6,9 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 
+/**
+ * Clase que representa un lugar y todos los datos que construyen la aplicacion
+ */
 @Parcelize
 @Entity(tableName = "ubicaciones")
 data class Lugar(

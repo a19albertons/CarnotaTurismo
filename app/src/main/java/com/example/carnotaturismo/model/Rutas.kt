@@ -5,6 +5,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
+/**
+ * Clase que representa una ruta y todos los datos que construyen la aplicacion
+ */
 @Parcelize
 @Entity(tableName = "rutas")
 data class Rutas(

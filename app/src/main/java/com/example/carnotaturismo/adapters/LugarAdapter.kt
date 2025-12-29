@@ -13,6 +13,9 @@ import com.example.carnotaturismo.fragments.LugarFragmentDirections
 import com.example.carnotaturismo.fragments.VerTodosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 
+/**
+ * Adaptador para el RecyclerView de lugares (ubicaciones).
+ */
 class LugarAdapter(private var lugares: List<Lugar>)
     : RecyclerView.Adapter<LugarAdapter.ViewHolder>() {
 

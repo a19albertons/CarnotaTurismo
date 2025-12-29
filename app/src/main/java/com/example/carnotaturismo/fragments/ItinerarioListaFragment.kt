@@ -14,11 +14,15 @@ import com.example.carnotaturismo.databinding.FragmentItinerarioListaBinding
 import com.example.carnotaturismo.model.TurismoAppModel
 import kotlin.getValue
 
-
+/**
+ * Fragmento que representa la lista de itinerario
+ */
 class ItinerarioListaFragment : Fragment() {
+    // bindings
     private var _binding: FragmentItinerarioListaBinding? = null
     private val binding get() = _binding!!
 
+    // modelo
     private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }

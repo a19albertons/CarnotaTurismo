@@ -15,6 +15,9 @@ import com.example.carnotaturismo.fragments.VerTodosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.Rutas
 
+/**
+ * Adaptado para el recyclerView de itinerario lista
+ */
 class ItinerarioListaAdapter(private var itineraios: List<Rutas>)
     : RecyclerView.Adapter<ItinerarioListaAdapter.ViewHolder>() {
 

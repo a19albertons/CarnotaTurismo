@@ -15,11 +15,16 @@ import com.example.carnotaturismo.model.TurismoAppModel
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 
+/**
+ * Fragmento inicio
+ */
 class InicioFragment : Fragment() {
 
+    // bindings
     private var _binding: FragmentInicioBinding? = null
     private val binding get() = _binding!!
 
+    // model
     private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }

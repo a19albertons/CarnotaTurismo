@@ -4,6 +4,9 @@ import androidx.room.Embedded
 import androidx.room.Junction
 import androidx.room.Relation
 
+/**
+ * Clase que genera la lista de lugares para una ruta
+ */
 data class RutasConLugares(
     @Embedded val ruta: Rutas,
 

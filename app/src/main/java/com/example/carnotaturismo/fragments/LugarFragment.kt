@@ -14,11 +14,15 @@ import com.example.carnotaturismo.adapters.VerTodosAdapter
 import com.example.carnotaturismo.databinding.FragmentLugarBinding
 import com.example.carnotaturismo.model.TurismoAppModel
 
-
+/**
+ * Fragmento que representa a un lugar/ubicacion
+ */
 class LugarFragment : Fragment() {
+    // bindings
     private var _binding: FragmentLugarBinding? = null
     private val binding get() = _binding!!
 
+    // modelo
     private val model: TurismoAppModel by viewModels() {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
@@ -36,11 +40,15 @@ class LugarFragment : Fragment() {
         // Configurar el RecyclerView
         val recyclerView = binding.lugarAdapter
 
+        // Declara el layout
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        // Inicializar adapter con lista vacía y observar cambios en LiveData
         val listaLugares = model.lugares.value ?: emptyList()
         val adapter = LugarAdapter(listaLugares)
         recyclerView.adapter = adapter
+
+        // Observar cambios en LiveData y actualizar el adapter
         model.lugares.observe(viewLifecycleOwner) { lista ->
             adapter.setData(lista)
         }

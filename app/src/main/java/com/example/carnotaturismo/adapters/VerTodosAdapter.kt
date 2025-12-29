@@ -12,6 +12,9 @@ import com.example.carnotaturismo.fragments.InicioFragmentDirections
 import com.example.carnotaturismo.fragments.VerTodosFragmentDirections
 import com.example.carnotaturismo.model.Lugar
 
+/**
+ * Adaptador para el RecyclerView de Ver Todos.
+ */
 class VerTodosAdapter(private val lugares: List<Lugar>)
     : RecyclerView.Adapter<VerTodosAdapter.ViewHolder>() {
 

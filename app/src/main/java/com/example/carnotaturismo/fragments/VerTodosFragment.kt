@@ -20,10 +20,11 @@ import kotlin.getValue
  * Tambien soporta todos los tipos
  */
 class VerTodosFragment : Fragment() {
-
+    // bindings
     private var _binding: FragmentVerTodosBinding? = null
     private val binding get() = _binding!!
 
+    // modelo
     private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
@@ -43,19 +44,15 @@ class VerTodosFragment : Fragment() {
         // Recycler View
         val recyclerView = binding.RecyclerViewVertTodos
 
+        // Configura el layout
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        // Inicializar adapter con la lista que recibe
         val adapter = VerTodosAdapter(lista.toList())
         recyclerView.adapter = adapter
 
-        // Tipo
+        // Texto tipo
         binding.tipo.text = args.tipo.toString()
-
-
-
-
-
-
 
         return view
     }

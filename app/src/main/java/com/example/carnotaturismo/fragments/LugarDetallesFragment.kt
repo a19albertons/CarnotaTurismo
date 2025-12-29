@@ -11,11 +11,15 @@ import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentLugarDetallesBinding
 import com.example.carnotaturismo.model.TurismoAppModel
 
-
+/**
+ * Fragmento que representa lugar detalles
+ */
 class LugarDetallesFragment : Fragment() {
+    // bindings
     private var _binding: FragmentLugarDetallesBinding? = null
     private val binding get() = _binding!!
 
+    // modelo
     private val model: TurismoAppModel by viewModels() {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
