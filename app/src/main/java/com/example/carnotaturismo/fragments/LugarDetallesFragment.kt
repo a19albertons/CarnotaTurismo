@@ -1,10 +1,12 @@
 package com.example.carnotaturismo.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toUri
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.R
@@ -58,6 +60,14 @@ class LugarDetallesFragment : Fragment() {
         binding.leyenda.text = requireContext().resolveString(lugar.leyenda)
         binding.descripcion.text = requireContext().resolveString(lugar.descripcion)
         binding.importante.text = requireContext().resolveString(lugar.importante)
+
+        // Enlace imagen
+        binding.fotoMapa.setOnClickListener {
+            val webpage = args.lugar.imagenMapaEnlace
+            val intent = Intent(Intent.ACTION_VIEW, webpage.toUri())
+            startActivity(intent)
+        }
+
 
 
 

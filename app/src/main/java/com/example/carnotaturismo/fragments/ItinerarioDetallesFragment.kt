@@ -1,5 +1,7 @@
 package com.example.carnotaturismo.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +13,7 @@ import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentItinerarioDetallesBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.util.resolveString
+import androidx.core.net.toUri
 
 /**
  * Clase que representa el fragmento Itinerario Detalles
@@ -65,6 +68,13 @@ class ItinerarioDetallesFragment : Fragment() {
 
         binding.descripcion.text = requireContext().resolveString(ruta.descripcion)
         binding.importante.text = requireContext().resolveString(ruta.importante)
+
+        // Enlace imagen
+        binding.fotoMapa.setOnClickListener {
+            val webpage = args.ruta.imagenMapaEnlace
+            val intent = Intent(Intent.ACTION_VIEW, webpage.toUri())
+            startActivity(intent)
+        }
 
         return view
     }
