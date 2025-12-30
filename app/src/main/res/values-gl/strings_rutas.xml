@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Strings para rutas (clave-based) -->
+    <!-- Strings para rutas (gallego) -->
 
-    <string name="ruta_1_titulo">Ruta dos Xigantes</string>
-    <string name="ruta_1_duracion">3 horas</string>
-    <string name="ruta_1_dificultad">Media</string>
-    <string name="ruta_1_leyenda">Percorrido por monumentos chave</string>
-    <string name="ruta_1_descripcion">Unha ruta que une historia e natureza.</string>
-    <string name="ruta_1_importante">Levar auga</string>
+    <string name="ruta_1_titulo">Ruta do hórreo</string>
+    <string name="ruta_1_duracion">1h</string>
+    <string name="ruta_1_dificultad">BAIXA</string>
+    <string name="ruta_1_leyenda">📍 Destino</string>
+    <string name="ruta_1_descripcion">Ruta que che leva dende o hórreo de Lira ao de Carnota, dous dos máis emblemáticos de Galicia.</string>
+    <string name="ruta_1_importante">- Levar calzado axeitado.&#10;- Ter coidado en 2-3 zonas onde non hai beirarrúa</string>
 
-    <string name="ruta_2_titulo">Ruta Costeira Relax</string>
-    <string name="ruta_2_duracion">1 hora</string>
-    <string name="ruta_2_dificultad">Baixa</string>
-    <string name="ruta_2_leyenda">Paseo pola beira</string>
-    <string name="ruta_2_descripcion">Ideal para familias.</string>
-    <string name="ruta_2_importante">Marea baixa recomendada</string>
+    <string name="ruta_2_titulo">Unha volta por Carnota e arredores</string>
+    <string name="ruta_2_duracion">45-75 minutos</string>
+    <string name="ruta_2_dificultad">BAIXA</string>
+    <string name="ruta_2_leyenda">📍 Destino</string>
+    <string name="ruta_2_descripcion">Ruta que che leva desde o hórreo de Carnota polas súas dúas praias máis próximas</string>
+    <string name="ruta_2_importante">- Levar calzado axeitado (terra e area).&#10;- Hai alternativa só terrestre, cortesía de Google Maps</string>
 
 </resources>

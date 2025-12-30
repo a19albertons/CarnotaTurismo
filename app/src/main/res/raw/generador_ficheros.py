@@ -4,14 +4,16 @@ import os
 INPUT_FILE = 'muestra.txt'
 
 def escape_xml(text):
-    """Escapa caracteres especiales para XML y preserva saltos de línea como \n.
+    """Escapa caracteres especiales para XML y preserva saltos de línea como &#10;.
     Reemplaza comillas simples por la entidad XML &apos;.
     """
     if not text:
         return ""
     text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("'", "&apos;")
-    # Convertir saltos reales en la representación literal "\\n" para que Android/otros los interpreten como nueva línea
-    text = text.replace("\n", "\\n")
+    # Normalize Windows CRLF to LF, luego convertir saltos reales en la entidad XML "&#10;"
+    text = text.replace("\r\n", "\n").replace("\n", "&#10;")
+    # También normalizar secuencias literales "\\n" (barra + n) a la entidad, por si provienen de entradas ya escapadas
+    text = text.replace("\\n", "&#10;")
     return text
 
 
@@ -77,7 +79,7 @@ def parse_input(filename):
 
 def generate_strings_lugares(lugares):
     """Genera strings_lugares.xml"""
-    xml_content = "<resources>\n    <!-- Strings para lugares (clave-based) -->\n\n"
+    xml_content = '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <!-- Strings para lugares (clave-based) -->\n\n'
     
     for l in lugares:
         lid = l.get('id', '0')
@@ -94,7 +96,7 @@ def generate_strings_lugares(lugares):
 
 def generate_strings_rutas(rutas):
     """Genera strings_rutas.xml"""
-    xml_content = "<resources>\n    <!-- Strings para rutas (clave-based) -->\n\n"
+    xml_content = '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <!-- Strings para rutas (clave-based) -->\n\n'
     
     for r in rutas:
         rid = r.get('id', '0')

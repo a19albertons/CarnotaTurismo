@@ -1,24 +1,24 @@
 <resources>
     <string name="app_name">Carnota Turismo</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Fragmento en blanco</string>
 
     <!-- Menus -->
-    <string name="ajustes">ajustes</string>
-    <string name="sobre">sobre</string>
-    <string name="inicio">inicio</string>
-    <string name="ubicaciones">ubicaciones</string>
-    <string name="rutas">rutas</string>
-    <string name="favoritos">favoritos</string>
-    <string name="mapa">mapa</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="sobre">Sobre</string>
+    <string name="inicio">Inicio</string>
+    <string name="ubicaciones">Ubicaciones</string>
+    <string name="rutas">Rutas</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="mapa">Mapa</string>
 
-    <!-- Apliccion normal -->
+    <!-- Aplicación normal -->
     <string name="general">General</string>
     <string name="turismo_carnota">Turismo Carnota</string>
-    <string name="sobre_info">Imágenes extraídas de Internet.\nMapas extraídos de Google Maps.\nMapa puntos azules construcción propia desde Google maps.\nAplicación desarrollada por....</string>
+    <string name="sobre_info">Imágenes extraídas de Internet.&#10;Mapas extraídos de Google Maps.&#10;Mapa puntos azules construcción propia desde Google maps.&#10;Aplicación desarrollada por....</string>
 
     <!-- Errores -->
-    <string name="string_no_encontrada">Texto no encontrado disculpe las molestias</string>
+    <string name="string_no_encontrada">Texto no encontrado, disculpe las molestias</string>
 
     <!-- Etiquetas de dificultad -->
     <string name="dificultad_baja">Baja</string>
@@ -32,7 +32,7 @@
 
     <!-- UI labels added during i18n pass -->
     <string name="itinerario">Itinerario</string>
-    <string name="version_label">Versión: </string>
+    <string name="version_label">Versión:</string>
     <string name="ver_todos">Ver todos</string>
     <string name="idiomas_label">Idiomas:</string>
     <string name="musica_label">Música:</string>
@@ -45,13 +45,7 @@
     <string name="favorito">Favorito</string>
 
     <!-- Idiomas: display names for the selector -->
-    <string-array name="idiomas">
-        <item>Sistema</item>
-        <item>Español</item>
-        <item>Galego</item>
-        <item>English</item>
-    </string-array>
-
+    <string-array name="idiomas"><item>Sistema</item><item>Español</item><item>Galego</item><item>English</item></string-array>
     <string name="ajustes_guardados">Ajustes guardados</string>
 
 </resources>

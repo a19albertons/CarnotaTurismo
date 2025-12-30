@@ -1,10 +1,3 @@
 -- Inserts para la tabla 'rutas'
--- NOTA: los campos de texto (titulo, duracion, dificultad, leyenda, descripcion, importante)
--- almacenan CLAVES de recursos string cuando corresponda (p. ej. 'ruta_1_titulo').
-
--- ID 1: Ruta Compleja
--- Nota: ahora guardamos la dificultad como el nombre del enum (BAJA|MEDIA|ALTA)
-INSERT INTO "rutas" VALUES (1, 'ruta_1_titulo', 'ruta_1_duracion', 5.5, 'MEDIA', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/ruta1/mapa', 'ruta_1_leyenda', 'ruta_1_descripcion', 'ruta_1_importante', 1);
-
--- ID 2: Ruta Simple
-INSERT INTO "rutas" VALUES (2, 'ruta_2_titulo', 'ruta_2_duracion', 2.0, 'BAJA', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/ruta2/mapa', 'ruta_2_leyenda', 'ruta_2_descripcion', 'ruta_2_importante', 0);
+INSERT INTO "rutas" VALUES (1, 'ruta_1_titulo', 'ruta_1_duracion', 4.3, 'BAJA', '@drawable/ruta1', '@drawable/ruta1_mapa', 'https://www.google.com/maps/dir/H%C3%B3rreo+de+Lira,+R%C3%BAa+Lira,+15292+Lira,+A+Coru%C3%B1a/H%C3%B3rreo+de+Carnota,+15293+Vilar,+A+Coru%C3%B1a/@42.8098436,-9.1114963,3483m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0xd2f2a6d068e634d:0x82575a480ed94e93!2m2!1d-9.1258789!2d42.7990028!1m5!1m1!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!2m2!1d-9.0905616!2d42.8224189!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'ruta_1_leyenda', 'ruta_1_descripcion', 'ruta_1_importante', 0);
+INSERT INTO "rutas" VALUES (2, 'ruta_2_titulo', 'ruta_2_duracion', 5.5, 'BAJA', '@drawable/ruta2', '@drawable/ruta2_mapa', 'https://www.google.com/maps/dir/H%C3%B3rreo+de+Carnota,+15293+Vilar,+A+Coru%C3%B1a/42.827693,-9.104906/Praia+Boca+do+R%C3%ADo/@42.8326324,-9.1032108,3193m/data=!3m1!1e3!4m15!4m14!1m5!1m1!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!2m2!1d-9.0905616!2d42.8224189!1m0!1m5!1m1!1s0xd2ed5d705270369:0xb6b3d2ec516a36ca!2m2!1d-9.1036903!2d42.8404741!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'ruta_2_leyenda', 'ruta_2_descripcion', 'ruta_2_importante', 0);

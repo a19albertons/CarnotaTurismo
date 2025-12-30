@@ -1,53 +1,114 @@
 Lugar
 id: 1
-titulo: sdfasdfd
-ubicacion: Fafasfd
-leyenda: adfasfasfs
-descripcion: fasdfasfsafas
-fasdfasfasf
-dasfasfasdf
-imagen: foto
-imagenMapa: foto2
-imagenMapaEnlace: http://example.com/ruta1/mapa
+titulo: Horreo Carnota
+ubicacion: Carnota Centro
+leyenda: 📍 Destino
+descripcion: Considerado uno de los horreos más grandes de galicia ubicado en el centro de carnota.
+imagen: @drawable/horreo_carnota
+imagenMapa: @drawable/horreo_carnota_mapa
+imagenMapaEnlace: https://www.google.com/maps/place/H%C3%B3rreo+de+Carnota/@42.8224889,-9.0908413,122m/data=!3m1!1e3!4m6!3m5!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!8m2!3d42.8224189!4d-9.0905616!16s%2Fg%2F11fhwwcqkd!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
 tipo: Monumento
-importante: fasdfasfasd
-dfasfasdfasdfsa
-sdafdasfsdfsfafaf
-favorito: 1
+importante: No hay acceso directo en coche en la actualidad la ubicación más cercana para aparcar es el bar O Cuberto.
+favorito: 0
 -------------
 Lugar
 id: 2
-titulo: sdfasdfd
-ubicacion: Fafasfd
-leyenda: adfasfasfs
-descripcion: fasdfasfsafas
-fasdfasfasf
-dasfasfasdf
-imagen: foto
-imagenMapa: foto2
-imagenMapaEnlace: http://example.com/ruta1/mapa
+titulo: Horreo Lira
+ubicacion: Lira
+leyenda: 📍 Destino
+descripcion: Es un horreo similar al de Carnota, pero un poco más pequeño aunque tenga más pilares porque los tiene más juntos.
+imagen: @drawable/horreo_lira
+imagenMapa: @drawable/horreo_lira_mapa
+imagenMapaEnlace: https://www.google.com/maps/place/H%C3%B3rreo+de+Lira/@42.7989873,-9.1263138,218m/data=!3m1!1e3!4m6!3m5!1s0xd2f2a6d068e634d:0x82575a480ed94e93!8m2!3d42.7990028!4d-9.1258789!16s%2Fg%2F11jg8qqgm9!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
 tipo: Monumento
-importante: fasdfasfasd
-dfasfasdfasdfsa
-sdafdasfsdfsfafaf
-favorito: 1
+importante: Hay aparcamiento al lado de la iglexia parroquial a escasos metros uno del otro.
+favorito: 0
+-------------
+Lugar
+id: 3
+titulo: Senderismo Lariño - Louredo
+ubicacion: Lariño e Louredo
+leyenda: 📍 Destino
+descripcion: Ruta de senderismo de dificultad media, duracion unas 4 horas y una distancia de 19km.
+imagen: @drawable/senderismo_larino_louredo
+imagenMapa: @drawable/senderismo_larino_louredo
+imagenMapaEnlace: https://www.google.com/maps/place/42%C2%B046'31.4%22N+9%C2%B007'14.2%22W/@42.7753994,-9.1215134,436m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d42.775398!4d-9.120603!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+tipo: Senderismo
+importante: Llevar calzado comodo, bateria en el movil, agua, salir de dia con tiempo de sobra...
+favorito: 0
+-------------
+Lugar
+id: 4
+titulo: Playa Carnota
+ubicacion: Carnota
+leyenda: 📍 Destino
+descripcion: Playa más larga de europa puedes disfrutas de aguas cristalina.
+imagen: @drawable/playa_carnota
+imagenMapa: @drawable/playa_carnota_mapa
+imagenMapaEnlace: https://www.google.com/maps/dir//Praia+de+Carnota,+Carnota,+A+Coru%C3%B1a/@42.8309458,-9.1084323,671m/data=!3m1!1e3!4m17!1m7!3m6!1s0xd2ed5ef9708c90f:0xbedaa0e625119e!2sPraia+de+Carnota!8m2!3d42.8313354!4d-9.1058444!16s%2Fg%2F1225dcys!4m8!1m0!1m5!1m1!1s0xd2ed5ef9708c90f:0xbedaa0e625119e!2m2!1d-9.1058444!2d42.8313354!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+tipo: Playa
+importante: Tener cuidado con las fanecas, llevar calzado apropiado (fanequeras).
+favorito: 0
+-------------
+Lugar
+id: 5
+titulo: Playa Lariño
+ubicacion: Lariño
+leyenda: 📍 Destino
+descripcion: Playa idonea para el surf y ver sus modificaciones naturales con el tiempo sin acción del hombre.
+imagen: @drawable/playa_larino
+imagenMapa: @drawable/playa_larino_mapa
+imagenMapaEnlace: https://www.google.com/maps/place/Praia+de+Lari%C3%B1o/@42.7646297,-9.123563,1743m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2f2bc83705d487:0x15683a6348aa736b!8m2!3d42.7646111!4d-9.1155259!16s%2Fg%2F11x9m1jp3!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+tipo: Playa
+importante: - Tener cuidado con las fanecas, llevar calzado apropiado (fanequeras).
+- No adentrarse en exceso puede hacer efecto escalon.
+- No fiarse del holeaje tiene corrientes que te pueden llevar a mar abierto.
+favorito: 0
+-------------
+Lugar
+id: 6
+titulo: Playa Boca del Rio
+ubicacion: Pedrafigueira
+leyenda: 📍 Destino
+descripcion: Playa donde puedes disfrutar de aguas cristalina y la acción de la naturaleza.
+imagen: @drawable/playa_boca_rio
+imagenMapa: @drawable/playa_boca_rio_mapa
+imagenMapaEnlace: https://www.google.com/maps/place/Praia+Boca+do+R%C3%ADo/@42.8404889,-9.11399,3482m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2ed5d705270369:0xb6b3d2ec516a36ca!8m2!3d42.8404741!4d-9.1036903!16s%2Fg%2F11c3nx8yy8!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+tipo: Playa
+importante: - Tener cuidado con las corrientes.
+- Hay varios zonas de aparcamiento disponibles.
+favorito: 0
 -------------
 Ruta
 id: 1
-titulo: fasfdsafsd
-ubicacion: fasdfasfasd
+titulo: Ruta del horreo
+ubicacion: Lira-Carnota
 duracion: 1h
-km: 5.20
+km: 4.3
 dificultad: BAJA
-imagen: foto
-imagenMapa: foto2
-imagenMapaEnlace: http://example.com/ruta1/mapa
-leyenda: dfadfasdfasd
-descripcion: sdfdasfasfasfd
-fasfasdfasfasddf
-sdfdasfasdfasfsa
-dsfdasf
-fsdafasffa
-importante: fadsfasdfas
+imagen: @drawable/ruta1
+imagenMapa: @drawable/ruta1_mapa
+imagenMapaEnlace: https://www.google.com/maps/dir/H%C3%B3rreo+de+Lira,+R%C3%BAa+Lira,+15292+Lira,+A+Coru%C3%B1a/H%C3%B3rreo+de+Carnota,+15293+Vilar,+A+Coru%C3%B1a/@42.8098436,-9.1114963,3483m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0xd2f2a6d068e634d:0x82575a480ed94e93!2m2!1d-9.1258789!2d42.7990028!1m5!1m1!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!2m2!1d-9.0905616!2d42.8224189!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+leyenda: 📍 Destino
+descripcion: Ruta que te lleva desde el horreo de lira al de Carnota que son de los más emblemáticos de Galicia.
+importante: - Llevar calzado apto.
+- Tener cuidado con 2-3 zonas donde no hay acera
 favorito: 0
-lugares_ids: 1,2
+lugares_ids: 2,1
+-------------
+Ruta
+id: 2
+titulo: Una vuelta por Carnota y alrededores
+ubicacion: Carnota-Pedrafigueira
+duracion: 45-75 minutos
+km: 5.5
+dificultad: BAJA
+imagen: @drawable/ruta2
+imagenMapa: @drawable/ruta2_mapa
+imagenMapaEnlace: https://www.google.com/maps/dir/H%C3%B3rreo+de+Carnota,+15293+Vilar,+A+Coru%C3%B1a/42.827693,-9.104906/Praia+Boca+do+R%C3%ADo/@42.8326324,-9.1032108,3193m/data=!3m1!1e3!4m15!4m14!1m5!1m1!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!2m2!1d-9.0905616!2d42.8224189!1m0!1m5!1m1!1s0xd2ed5d705270369:0xb6b3d2ec516a36ca!2m2!1d-9.1036903!2d42.8404741!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+leyenda: 📍 Destino
+descripcion: Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas
+importante: - Llevar calzado apto (tierra y arena).
+- Hay alternativa solo terrestre cortesia de google maps
+favorito: 0
+lugares_ids: 1,4,6

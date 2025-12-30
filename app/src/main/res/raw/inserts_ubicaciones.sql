@@ -1,15 +1,7 @@
 -- Inserts para la tabla 'ubicaciones'
--- NOTA: los campos de texto (titulo, leyenda, descripcion, importante) almacenan CLAVES de recursos string
--- (p. ej. 'lugar_1_titulo') para resolver en tiempo de ejecución usando resources.getIdentifier(...)
-
--- ID 1: Monumento (Estará en Ruta 1 y Ruta 2)
-INSERT INTO "ubicaciones" VALUES (1, 'lugar_1_titulo', 'Carnota Centro', 'lugar_1_leyenda', 'lugar_1_descripcion', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/horreo/mapa', 'Monumento', 'lugar_1_importante', 1);
-
--- ID 2: Playa (Estará en Ruta 2)
-INSERT INTO "ubicaciones" VALUES (2, 'lugar_2_titulo', 'Costa de Carnota', 'lugar_2_leyenda', 'lugar_2_descripcion', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/boca/mapa', 'Playa', 'lugar_2_importante', 0);
-
--- ID 3: Senderismo (Estará en Ruta 1)
-INSERT INTO "ubicaciones" VALUES (3, 'lugar_3_titulo', 'O Pindo', 'lugar_3_leyenda', 'lugar_3_descripcion', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/pindo/mapa', 'Senderismo', 'lugar_3_importante', 1);
-
--- ID 4: Monumento (No asignado a ninguna ruta - Huérfano)
-INSERT INTO "ubicaciones" VALUES (4, 'lugar_4_titulo', 'Dumbría/Carnota', 'lugar_4_leyenda', 'lugar_4_descripcion', '@drawable/pruebas', '@drawable/pruebas', 'http://example.com/ezaro/mapa', 'Monumento', 'lugar_4_importante', 0);
+INSERT INTO "ubicaciones" VALUES (1, 'lugar_1_titulo', 'Carnota Centro', 'lugar_1_leyenda', 'lugar_1_descripcion', '@drawable/horreo_carnota', '@drawable/horreo_carnota_mapa', 'https://www.google.com/maps/place/H%C3%B3rreo+de+Carnota/@42.8224889,-9.0908413,122m/data=!3m1!1e3!4m6!3m5!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!8m2!3d42.8224189!4d-9.0905616!16s%2Fg%2F11fhwwcqkd!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'Monumento', 'lugar_1_importante', 0);
+INSERT INTO "ubicaciones" VALUES (2, 'lugar_2_titulo', 'Lira', 'lugar_2_leyenda', 'lugar_2_descripcion', '@drawable/horreo_lira', '@drawable/horreo_lira_mapa', 'https://www.google.com/maps/place/H%C3%B3rreo+de+Lira/@42.7989873,-9.1263138,218m/data=!3m1!1e3!4m6!3m5!1s0xd2f2a6d068e634d:0x82575a480ed94e93!8m2!3d42.7990028!4d-9.1258789!16s%2Fg%2F11jg8qqgm9!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'Monumento', 'lugar_2_importante', 0);
+INSERT INTO "ubicaciones" VALUES (3, 'lugar_3_titulo', 'Lariño e Louredo', 'lugar_3_leyenda', 'lugar_3_descripcion', '@drawable/senderismo_larino_louredo', '@drawable/senderismo_larino_louredo', 'https://www.google.com/maps/place/42%C2%B046''31.4%22N+9%C2%B007''14.2%22W/@42.7753994,-9.1215134,436m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d42.775398!4d-9.120603!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'Senderismo', 'lugar_3_importante', 0);
+INSERT INTO "ubicaciones" VALUES (4, 'lugar_4_titulo', 'Carnota', 'lugar_4_leyenda', 'lugar_4_descripcion', '@drawable/playa_carnota', '@drawable/playa_carnota_mapa', 'https://www.google.com/maps/dir//Praia+de+Carnota,+Carnota,+A+Coru%C3%B1a/@42.8309458,-9.1084323,671m/data=!3m1!1e3!4m17!1m7!3m6!1s0xd2ed5ef9708c90f:0xbedaa0e625119e!2sPraia+de+Carnota!8m2!3d42.8313354!4d-9.1058444!16s%2Fg%2F1225dcys!4m8!1m0!1m5!1m1!1s0xd2ed5ef9708c90f:0xbedaa0e625119e!2m2!1d-9.1058444!2d42.8313354!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'Playa', 'lugar_4_importante', 0);
+INSERT INTO "ubicaciones" VALUES (5, 'lugar_5_titulo', 'Lariño', 'lugar_5_leyenda', 'lugar_5_descripcion', '@drawable/playa_larino', '@drawable/playa_larino_mapa', 'https://www.google.com/maps/place/Praia+de+Lari%C3%B1o/@42.7646297,-9.123563,1743m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2f2bc83705d487:0x15683a6348aa736b!8m2!3d42.7646111!4d-9.1155259!16s%2Fg%2F11x9m1jp3!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'Playa', 'lugar_5_importante', 0);
+INSERT INTO "ubicaciones" VALUES (6, 'lugar_6_titulo', 'Pedrafigueira', 'lugar_6_leyenda', 'lugar_6_descripcion', '@drawable/playa_boca_rio', '@drawable/playa_boca_rio_mapa', 'https://www.google.com/maps/place/Praia+Boca+do+R%C3%ADo/@42.8404889,-9.11399,3482m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2ed5d705270369:0xb6b3d2ec516a36ca!8m2!3d42.8404741!4d-9.1036903!16s%2Fg%2F11c3nx8yy8!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D', 'Playa', 'lugar_6_importante', 0);

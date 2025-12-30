@@ -1,26 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Strings para lugares (clave-based) -->
 
-    <string name="lugar_1_titulo">Hórreo de Carnota</string>
-    <string name="lugar_1_leyenda">Uno de los más grandes de Galicia</string>
-    <string name="lugar_1_descripcion">Monumento nacional construido en piedra...</string>
-    <string name="lugar_1_importante">Visita obligada</string>
+    <string name="lugar_1_titulo">Horreo Carnota</string>
+    <string name="lugar_1_leyenda">📍 Destino</string>
+    <string name="lugar_1_descripcion">Considerado uno de los horreos más grandes de galicia ubicado en el centro de carnota.</string>
+    <string name="lugar_1_importante">No hay acceso directo en coche en la actualidad la ubicación más cercana para aparcar es el bar O Cuberto.</string>
 
-    <string name="lugar_2_titulo">Playa de Boca do Río</string>
-    <string name="lugar_2_leyenda">Donde el río encuentra el mar</string>
-    <string name="lugar_2_descripcion">Hermosa playa con formaciones rocosas...</string>
-    <string name="lugar_2_importante">Llevar protector solar</string>
+    <string name="lugar_2_titulo">Horreo Lira</string>
+    <string name="lugar_2_leyenda">📍 Destino</string>
+    <string name="lugar_2_descripcion">Es un horreo similar al de Carnota, pero un poco más pequeño aunque tenga más pilares porque los tiene más juntos.</string>
+    <string name="lugar_2_importante">Hay aparcamiento al lado de la iglexia parroquial a escasos metros uno del otro.</string>
 
-    <string name="lugar_3_titulo">Monte Pindo</string>
-    <string name="lugar_3_leyenda">El Olimpo Celta</string>
-    <string name="lugar_3_descripcion">Formaciones graníticas con historia mitológica.</string>
-    <string name="lugar_3_importante">Calzado cómodo necesario</string>
+    <string name="lugar_3_titulo">Senderismo Lariño - Louredo</string>
+    <string name="lugar_3_leyenda">📍 Destino</string>
+    <string name="lugar_3_descripcion">Ruta de senderismo de dificultad media, duracion unas 4 horas y una distancia de 19km.</string>
+    <string name="lugar_3_importante">Llevar calzado comodo, bateria en el movil, agua, salir de dia con tiempo de sobra...</string>
 
-    <string name="lugar_4_titulo">Fervenza de Ézaro</string>
-    <string name="lugar_4_leyenda">El río Xallas cae al mar</string>
-    <string name="lugar_4_descripcion">Espectacular cascada iluminada en verano.</string>
-    <string name="lugar_4_importante">Verificar horarios de iluminación</string>
+    <string name="lugar_4_titulo">Playa Carnota</string>
+    <string name="lugar_4_leyenda">📍 Destino</string>
+    <string name="lugar_4_descripcion">Playa más larga de europa puedes disfrutas de aguas cristalina.</string>
+    <string name="lugar_4_importante">Tener cuidado con las fanecas, llevar calzado apropiado (fanequeras).</string>
 
+    <string name="lugar_5_titulo">Playa Lariño</string>
+    <string name="lugar_5_leyenda">📍 Destino</string>
+    <string name="lugar_5_descripcion">Playa idonea para el surf y ver sus modificaciones naturales con el tiempo sin acción del hombre.</string>
+    <string name="lugar_5_importante">- Tener cuidado con las fanecas, llevar calzado apropiado (fanequeras).&#10;- No adentrarse en exceso puede hacer efecto escalon.&#10;- No fiarse del holeaje tiene corrientes que te pueden llevar a mar abierto.</string>
 
+    <string name="lugar_6_titulo">Playa Boca del Rio</string>
+    <string name="lugar_6_leyenda">📍 Destino</string>
+    <string name="lugar_6_descripcion">Playa donde puedes disfrutar de aguas cristalina y la acción de la naturaleza.</string>
+    <string name="lugar_6_importante">- Tener cuidado con las corrientes.&#10;- Hay varios zonas de aparcamiento disponibles.</string>
 
 </resources>

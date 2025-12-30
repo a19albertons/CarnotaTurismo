@@ -1,0 +1,53 @@
+Lugar
+id: 1
+titulo: sdfasdfd
+ubicacion: Fafasfd
+leyenda: adfasfasfs
+descripcion: fasdfasfsafas
+fasdfasfasf
+dasfasfasdf
+imagen: foto
+imagenMapa: foto2
+imagenMapaEnlace: http://example.com/ruta1/mapa
+tipo: Monumento
+importante: fasdfasfasd
+dfasfasdfasdfsa
+sdafdasfsdfsfafaf
+favorito: 1
+-------------
+Lugar
+id: 2
+titulo: sdfasdfd
+ubicacion: Fafasfd
+leyenda: adfasfasfs
+descripcion: fasdfasfsafas
+fasdfasfasf
+dasfasfasdf
+imagen: foto
+imagenMapa: foto2
+imagenMapaEnlace: http://example.com/ruta1/mapa
+tipo: Monumento
+importante: fasdfasfasd
+dfasfasdfasdfsa
+sdafdasfsdfsfafaf
+favorito: 1
+-------------
+Ruta
+id: 1
+titulo: fasfdsafsd
+ubicacion: fasdfasfasd
+duracion: 1h
+km: 5.20
+dificultad: BAJA
+imagen: foto
+imagenMapa: foto2
+imagenMapaEnlace: http://example.com/ruta1/mapa
+leyenda: dfadfasdfasd
+descripcion: sdfdasfasfasfd
+fasfasdfasfasddf
+sdfdasfasdfasfsa
+dsfdasf
+fsdafasffa
+importante: fadsfasdfas
+favorito: 0
+lugares_ids: 1,2

@@ -1,20 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Strings para rutas (clave-based) -->
 
-    <string name="ruta_1_titulo">Ruta de los Gigantes</string>
-    <string name="ruta_1_duracion">3 horas</string>
-    <string name="ruta_1_dificultad">Media</string>
-    <string name="ruta_1_leyenda">Recorrido por monumentos clave</string>
-    <string name="ruta_1_descripcion">Una ruta que une historia y naturaleza.</string>
-    <string name="ruta_1_importante">Llevar agua</string>
+    <string name="ruta_1_titulo">Ruta del horreo</string>
+    <string name="ruta_1_duracion">1h</string>
+    <string name="ruta_1_dificultad">BAJA</string>
+    <string name="ruta_1_leyenda">📍 Destino</string>
+    <string name="ruta_1_descripcion">Ruta que te lleva desde el horreo de lira al de Carnota que son de los más emblemáticos de Galicia.</string>
+    <string name="ruta_1_importante">- Llevar calzado apto.&#10;- Tener cuidado con 2-3 zonas donde no hay acera</string>
 
-    <string name="ruta_2_titulo">Ruta Costera Relax</string>
-    <string name="ruta_2_duracion">1 hora</string>
-    <string name="ruta_2_dificultad">Baja</string>
-    <string name="ruta_2_leyenda">Paseo por la orilla</string>
-    <string name="ruta_2_descripcion">Ideal para familias.</string>
-    <string name="ruta_2_importante">Marea baja recomendada</string>
-
-
+    <string name="ruta_2_titulo">Una vuelta por Carnota y alrededores</string>
+    <string name="ruta_2_duracion">45-75 minutos</string>
+    <string name="ruta_2_dificultad">BAJA</string>
+    <string name="ruta_2_leyenda">📍 Destino</string>
+    <string name="ruta_2_descripcion">Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas</string>
+    <string name="ruta_2_importante">- Llevar calzado apto (tierra y arena).&#10;- Hay alternativa solo terrestre cortesia de google maps</string>
 
 </resources>

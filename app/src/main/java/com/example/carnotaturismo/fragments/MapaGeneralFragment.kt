@@ -39,7 +39,7 @@ class MapaGeneralFragment : Fragment() {
         binding.tituloUbicaciones.text = lugares.joinToString(separator = "\n") { requireContext().resolveString(it.titulo) }
 
         // Mostrar imagen de pruebas (por si la BD de testing no tiene imágenes reales)
-        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), null, binding.fotoMapaGeneral)
+        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), "@drawable/mapa_general", binding.fotoMapaGeneral)
 
         // Observamos cambios
         model.lugares.observe(viewLifecycleOwner) { lista ->
