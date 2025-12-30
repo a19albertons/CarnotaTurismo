@@ -4,12 +4,25 @@ import os
 INPUT_FILE = 'muestra.txt'
 
 def escape_xml(text):
-    """Escapa caracteres especiales para XML y preserva saltos de línea como \n."""
-    if not text: return ""
-    text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("'", "\'")
+    """Escapa caracteres especiales para XML y preserva saltos de línea como \n.
+    Reemplaza comillas simples por la entidad XML &apos;.
+    """
+    if not text:
+        return ""
+    text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("'", "&apos;")
     # Convertir saltos reales en la representación literal "\\n" para que Android/otros los interpreten como nueva línea
     text = text.replace("\n", "\\n")
     return text
+
+
+def escape_sql(text):
+    """Escapa comillas simples para SQL y preserva saltos de línea como \\n
+    Duplica comillas simples (''), y convierte saltos de línea en la representación literal "\\n" para evitar romper el SQL.
+    """
+    if text is None:
+        return ""
+    # Duplicar comillas simples para evitar romper literales SQL
+    return text.replace("'", "''").replace("\n", "\\n")
 
 def parse_input(filename):
     """Lee el archivo muestra.txt y devuelve listas de lugares y rutas."""
@@ -110,12 +123,12 @@ def generate_inserts_ubicaciones(lugares):
         desc_res = f"lugar_{lid}_descripcion"
         imp_res = f"lugar_{lid}_importante"
         
-        # Datos raw
-        ubicacion = l.get('ubicacion', '')
-        img = l.get('imagen', '')
-        imgMap = l.get('imagenMapa', '')
-        imgMapLink = l.get('imagenMapaEnlace', '')
-        tipo = l.get('tipo', 'Monumento')
+        # Datos raw (escapados para SQL)
+        ubicacion = escape_sql(l.get('ubicacion', ''))
+        img = escape_sql(l.get('imagen', ''))
+        imgMap = escape_sql(l.get('imagenMapa', ''))
+        imgMapLink = escape_sql(l.get('imagenMapaEnlace', ''))
+        tipo = escape_sql(l.get('tipo', 'Monumento'))
         fav = l.get('favorito', '0')
         
         sql = f"INSERT INTO \"ubicaciones\" VALUES ({lid}, '{titulo_res}', '{ubicacion}', '{leyenda_res}', '{desc_res}', '{img}', '{imgMap}', '{imgMapLink}', '{tipo}', '{imp_res}', {fav});\n"
@@ -137,17 +150,17 @@ def generate_inserts_rutas(rutas):
         # Nota: Dificultad en SQL suele ser ENUM (raw), pero en strings.xml se creó recurso.
         # Basado en tu ejemplo 'inserts_rutas.txt', la dificultad se guarda RAW ('MEDIA'), no como recurso.
         # Ajustaré aquí para usar el valor crudo en SQL como en tu ejemplo.
-        dificultad_raw = r.get('dificultad', 'BAJA') 
+        dificultad_raw = escape_sql(r.get('dificultad', 'BAJA')) 
         
         leyenda_res = f"ruta_{rid}_leyenda"
         desc_res = f"ruta_{rid}_descripcion"
         imp_res = f"ruta_{rid}_importante"
         
-        # Datos raw
+        # Datos raw (escapados para SQL)
         km = r.get('km', '0.0')
-        img = r.get('imagen', '')
-        imgMap = r.get('imagenMapa', '')
-        imgMapLink = r.get('imagenMapaEnlace', '')
+        img = escape_sql(r.get('imagen', ''))
+        imgMap = escape_sql(r.get('imagenMapa', ''))
+        imgMapLink = escape_sql(r.get('imagenMapaEnlace', ''))
         fav = r.get('favorito', '0')
         
         sql = f"INSERT INTO \"rutas\" VALUES ({rid}, '{titulo_res}', '{dur_res}', {km}, '{dificultad_raw}', '{img}', '{imgMap}', '{imgMapLink}', '{leyenda_res}', '{desc_res}', '{imp_res}', {fav});\n"
