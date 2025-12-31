@@ -31,7 +31,7 @@ ubicacion: Lariño e Louredo
 leyenda: 📍 Destino
 descripcion: Ruta de senderismo de dificultad media, duracion unas 4 horas y una distancia de 19km.
 imagen: @drawable/senderismo_larino_louredo
-imagenMapa: @drawable/senderismo_larino_louredo
+imagenMapa: @drawable/senderismo_larino_louredo_mapa
 imagenMapaEnlace: https://www.google.com/maps/place/42%C2%B046'31.4%22N+9%C2%B007'14.2%22W/@42.7753994,-9.1215134,436m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d42.775398!4d-9.120603!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
 tipo: Senderismo
 importante: Llevar calzado comodo, bateria en el movil, agua, salir de dia con tiempo de sobra...
