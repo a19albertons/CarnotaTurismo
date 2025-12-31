@@ -15,7 +15,7 @@
     <!-- Aplicación normal -->
     <string name="general">General</string>
     <string name="turismo_carnota">Turismo Carnota</string>
-    <string name="sobre_info">Imágenes extraídas de Internet.&#10;Mapas extraídos de Google Maps.&#10;Mapa puntos azules construcción propia desde Google maps.&#10;Aplicación desarrollada por....</string>
+    <string name="sobre_info">Imágenes extraídas de Internet.\nMapas extraídos de Google Maps.\nMapa puntos azules construcción propia desde Google maps.\nAplicación desarrollada por....</string>
 
     <!-- Errores -->
     <string name="string_no_encontrada">Texto no encontrado, disculpe las molestias</string>

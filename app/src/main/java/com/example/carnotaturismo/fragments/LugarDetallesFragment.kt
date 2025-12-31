@@ -56,7 +56,7 @@ class LugarDetallesFragment : Fragment() {
         }
 
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
-        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), lugar.imagen, binding.fotoMapa)
+        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), lugar.imagenMapa, binding.fotoMapa)
         binding.leyenda.text = requireContext().resolveString(lugar.leyenda)
         binding.descripcion.text = requireContext().resolveString(lugar.descripcion)
         binding.importante.text = requireContext().resolveString(lugar.importante)

@@ -25,11 +25,11 @@
     <string name="lugar_5_titulo">Lariño Beach</string>
     <string name="lugar_5_leyenda">📍 Destination</string>
     <string name="lugar_5_descripcion">Ideal beach for surfing and to observe natural changes over time without human intervention.</string>
-    <string name="lugar_5_importante">- Be careful with the shingle; wear appropriate footwear (fanequeiras).&#10;- Do not venture too far in, as drop steps may form.&#10;- Do not trust the surf; currents can carry you out to sea.</string>
+    <string name="lugar_5_importante">- Be careful with the shingle; wear appropriate footwear (fanequeiras).\n- Do not venture too far in, as drop steps may form.\n- Do not trust the surf; currents can carry you out to sea.</string>
 
     <string name="lugar_6_titulo">Boca del Río Beach</string>
     <string name="lugar_6_leyenda">📍 Destination</string>
     <string name="lugar_6_descripcion">Beach where you can enjoy crystal clear waters and the action of nature.</string>
-    <string name="lugar_6_importante">- Be careful with currents.&#10;- There are several parking areas available.</string>
+    <string name="lugar_6_importante">- Be careful with currents.\n- There are several parking areas available.</string>
 
 </resources>

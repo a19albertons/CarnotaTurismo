@@ -14,7 +14,7 @@
     <!-- App general -->
     <string name="general">General</string>
     <string name="turismo_carnota">Carnota Tourism</string>
-    <string name="sobre_info">Images sourced from the Internet.&#10;Maps sourced from Google Maps.&#10;Blue points map constructed from Google Maps.&#10;Application developed by....</string>
+    <string name="sobre_info">Images sourced from the Internet.\nMaps sourced from Google Maps.\nBlue points map constructed from Google Maps.\nApplication developed by....</string>
 
     <!-- Errors -->
     <string name="string_no_encontrada">Text not found, sorry for the inconvenience</string>

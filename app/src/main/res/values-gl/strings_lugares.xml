@@ -25,11 +25,11 @@
     <string name="lugar_5_titulo">Praia de Lariño</string>
     <string name="lugar_5_leyenda">📍 Destino</string>
     <string name="lugar_5_descripcion">Praia idónea para o surf e para observar as súas modificacións naturais co paso do tempo sen acción humana.</string>
-    <string name="lugar_5_importante">- Ter coidado coas fanecas; levar calzado axeitado (fanequeiras).&#10;- Non adentrarse en exceso porque pode formar efecto escalón.&#10;- Non confiar no oleaxe, hai correntes que poden levar ao mar aberto.</string>
+    <string name="lugar_5_importante">- Ter coidado coas fanecas; levar calzado axeitado (fanequeiras).\n- Non adentrarse en exceso porque pode formar efecto escalón.\n- Non confiar no oleaxe, hai correntes que poden levar ao mar aberto.</string>
 
     <string name="lugar_6_titulo">Praia Boca do Río</string>
     <string name="lugar_6_leyenda">📍 Destino</string>
     <string name="lugar_6_descripcion">Praia onde podes desfrutar de augas cristalinas e da acción da natureza.</string>
-    <string name="lugar_6_importante">- Ter coidado coas correntes.&#10;- Hai varias zonas de aparcadoiro dispoñibles.</string>
+    <string name="lugar_6_importante">- Ter coidado coas correntes.\n- Hai varias zonas de aparcadoiro dispoñibles.</string>
 
 </resources>

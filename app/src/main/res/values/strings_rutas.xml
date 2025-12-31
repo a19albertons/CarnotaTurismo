@@ -7,13 +7,13 @@
     <string name="ruta_1_dificultad">BAJA</string>
     <string name="ruta_1_leyenda">📍 Destino</string>
     <string name="ruta_1_descripcion">Ruta que te lleva desde el horreo de lira al de Carnota que son de los más emblemáticos de Galicia.</string>
-    <string name="ruta_1_importante">- Llevar calzado apto.&#10;- Tener cuidado con 2-3 zonas donde no hay acera</string>
+    <string name="ruta_1_importante">- Llevar calzado apto.\n- Tener cuidado con 2-3 zonas donde no hay acera</string>
 
     <string name="ruta_2_titulo">Una vuelta por Carnota y alrededores</string>
     <string name="ruta_2_duracion">45-75 minutos</string>
     <string name="ruta_2_dificultad">BAJA</string>
     <string name="ruta_2_leyenda">📍 Destino</string>
     <string name="ruta_2_descripcion">Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas</string>
-    <string name="ruta_2_importante">- Llevar calzado apto (tierra y arena).&#10;- Hay alternativa solo terrestre cortesia de google maps</string>
+    <string name="ruta_2_importante">- Llevar calzado apto (tierra y arena).\n- Hay alternativa solo terrestre cortesia de google maps</string>
 
 </resources>

@@ -14,7 +14,7 @@
     <!-- Aplicación normal -->
     <string name="general">Xeral</string>
     <string name="turismo_carnota">Turismo Carnota</string>
-    <string name="sobre_info">Imaxes extraídas de Internet.&#10;Mapas extraídos de Google Maps.&#10;Mapa de puntos azuis construído a partir de Google Maps.&#10;Aplicación desenvolvida por....</string>
+    <string name="sobre_info">Imaxes extraídas de Internet.\nMapas extraídos de Google Maps.\nMapa de puntos azuis construído a partir de Google Maps.\nAplicación desenvolvida por....</string>
 
     <!-- Errores -->
     <string name="string_no_encontrada">Texto non atopado, desculpe as molestias</string>

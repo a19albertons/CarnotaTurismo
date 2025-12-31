@@ -7,13 +7,13 @@
     <string name="ruta_1_dificultad">BAIXA</string>
     <string name="ruta_1_leyenda">📍 Destino</string>
     <string name="ruta_1_descripcion">Ruta que che leva dende o hórreo de Lira ao de Carnota, dous dos máis emblemáticos de Galicia.</string>
-    <string name="ruta_1_importante">- Levar calzado axeitado.&#10;- Ter coidado en 2-3 zonas onde non hai beirarrúa</string>
+    <string name="ruta_1_importante">- Levar calzado axeitado.\n- Ter coidado en 2-3 zonas onde non hai beirarrúa</string>
 
     <string name="ruta_2_titulo">Unha volta por Carnota e arredores</string>
     <string name="ruta_2_duracion">45-75 minutos</string>
     <string name="ruta_2_dificultad">BAIXA</string>
     <string name="ruta_2_leyenda">📍 Destino</string>
     <string name="ruta_2_descripcion">Ruta que che leva desde o hórreo de Carnota polas súas dúas praias máis próximas</string>
-    <string name="ruta_2_importante">- Levar calzado axeitado (terra e area).&#10;- Hai alternativa só terrestre, cortesía de Google Maps</string>
+    <string name="ruta_2_importante">- Levar calzado axeitado (terra e area).\n- Hai alternativa só terrestre, cortesía de Google Maps</string>
 
 </resources>

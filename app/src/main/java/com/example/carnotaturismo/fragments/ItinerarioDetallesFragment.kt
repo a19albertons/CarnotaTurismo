@@ -57,7 +57,7 @@ class ItinerarioDetallesFragment : Fragment() {
         }
 
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
-        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), ruta.imagen, binding.fotoMapa)
+        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), ruta.imagenMapa, binding.fotoMapa)
         binding.leyenda.text = requireContext().resolveString(ruta.leyenda)
 
         // Obtener los lugares asociados a esta ruta y mostrarlos

@@ -7,13 +7,13 @@
     <string name="ruta_1_dificultad">LOW</string>
     <string name="ruta_1_leyenda">📍 Destination</string>
     <string name="ruta_1_descripcion">Route that takes you from the Lira hórreo to the hórreo in Carnota, two of the most emblematic in Galicia.</string>
-    <string name="ruta_1_importante">- Wear appropriate footwear.&#10;- Be careful in 2-3 areas where there is no sidewalk</string>
+    <string name="ruta_1_importante">- Wear appropriate footwear.\n- Be careful in 2-3 areas where there is no sidewalk</string>
 
     <string name="ruta_2_titulo">A walk around Carnota and surroundings</string>
     <string name="ruta_2_duracion">45-75 minutes</string>
     <string name="ruta_2_dificultad">LOW</string>
     <string name="ruta_2_leyenda">📍 Destination</string>
     <string name="ruta_2_descripcion">Route that takes you from the hórreo in Carnota to its two nearest beaches</string>
-    <string name="ruta_2_importante">- Wear appropriate footwear (dirt and sand).&#10;- There is an alternative land-only route courtesy of Google Maps</string>
+    <string name="ruta_2_importante">- Wear appropriate footwear (dirt and sand).\n- There is an alternative land-only route courtesy of Google Maps</string>
 
 </resources>

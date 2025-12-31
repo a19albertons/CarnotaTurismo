@@ -25,11 +25,11 @@
     <string name="lugar_5_titulo">Playa Lariño</string>
     <string name="lugar_5_leyenda">📍 Destino</string>
     <string name="lugar_5_descripcion">Playa idonea para el surf y ver sus modificaciones naturales con el tiempo sin acción del hombre.</string>
-    <string name="lugar_5_importante">- Tener cuidado con las fanecas, llevar calzado apropiado (fanequeras).&#10;- No adentrarse en exceso puede hacer efecto escalon.&#10;- No fiarse del holeaje tiene corrientes que te pueden llevar a mar abierto.</string>
+    <string name="lugar_5_importante">- Tener cuidado con las fanecas, llevar calzado apropiado (fanequeras).\n- No adentrarse en exceso puede hacer efecto escalon.\n- No fiarse del holeaje tiene corrientes que te pueden llevar a mar abierto.</string>
 
     <string name="lugar_6_titulo">Playa Boca del Rio</string>
     <string name="lugar_6_leyenda">📍 Destino</string>
     <string name="lugar_6_descripcion">Playa donde puedes disfrutar de aguas cristalina y la acción de la naturaleza.</string>
-    <string name="lugar_6_importante">- Tener cuidado con las corrientes.&#10;- Hay varios zonas de aparcamiento disponibles.</string>
+    <string name="lugar_6_importante">- Tener cuidado con las corrientes.\n- Hay varios zonas de aparcamiento disponibles.</string>
 
 </resources>
