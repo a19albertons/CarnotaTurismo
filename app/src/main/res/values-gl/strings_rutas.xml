@@ -16,4 +16,11 @@
     <string name="ruta_2_descripcion">Ruta que che leva desde o hórreo de Carnota polas súas dúas praias máis próximas</string>
     <string name="ruta_2_importante">- Levar calzado axeitado (terra e area).\n- Hai alternativa só terrestre, cortesía de Google Maps</string>
 
+    <string name="ruta_3_titulo">Do faro a Louredo</string>
+    <string name="ruta_3_duracion">240 minutos</string>
+    <string name="ruta_3_dificultad">MEDIA</string>
+    <string name="ruta_3_leyenda">📍 Destino</string>
+    <string name="ruta_3_descripcion">Ruta onde comezas no faro de Lariño e rematas en Louredo seguindo a súa ruta de sendeirismo</string>
+    <string name="ruta_3_importante">- Saír a unha hora prudente.\n- Ter en conta a distancia da ida e volta.\n- Ao chegar ao final, colle o mapa da ruta de sendeirismo Lariño - Louredo</string>
+
 </resources>

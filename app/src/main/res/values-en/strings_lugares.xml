@@ -32,4 +32,14 @@
     <string name="lugar_6_descripcion">Beach where you can enjoy crystal clear waters and the action of nature.</string>
     <string name="lugar_6_importante">- Be careful with currents.\n- There are several parking areas available.</string>
 
+    <string name="lugar_7_titulo">Green Trail 1</string>
+    <string name="lugar_7_leyenda">📍 Destination</string>
+    <string name="lugar_7_descripcion">Trail where you can enjoy views of the Carnota hills along a route recognized as a green trail.</string>
+    <string name="lugar_7_importante">- Bring water, appropriate footwear.\n- Start at reasonable hours.</string>
+
+    <string name="lugar_8_titulo">Lariño Lighthouse</string>
+    <string name="lugar_8_leyenda">📍 Destination</string>
+    <string name="lugar_8_descripcion">Old lighthouse that served to warn ships of the risk of colliding with the coast</string>
+    <string name="lugar_8_importante">- Parking is available nearby.\n- Currently converted into a hotel, but it can still be visited.</string>
+
 </resources>

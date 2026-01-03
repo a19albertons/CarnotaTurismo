@@ -32,4 +32,14 @@
     <string name="lugar_6_descripcion">Praia onde podes desfrutar de augas cristalinas e da acción da natureza.</string>
     <string name="lugar_6_importante">- Ter coidado coas correntes.\n- Hai varias zonas de aparcadoiro dispoñibles.</string>
 
+    <string name="lugar_7_titulo">Senda Verde 1</string>
+    <string name="lugar_7_leyenda">📍 Destino</string>
+    <string name="lugar_7_descripcion">Ruta na que podes gozar das vistas no monte de Carnota por unha senda recoñecida como senda verde</string>
+    <string name="lugar_7_importante">- Levar auga, calzado axeitado.\n- Saír en horas prudentes.</string>
+
+    <string name="lugar_8_titulo">Faro Lariño</string>
+    <string name="lugar_8_leyenda">📍 Destino</string>
+    <string name="lugar_8_descripcion">Antigo faro que servía para avisar aos barcos do risco de chocar contra a costa</string>
+    <string name="lugar_8_importante">- Dispón de aparcadoiro preto do mesmo.\n- Actualmente reconvertido en hotel, pero aínda se pode visitar.</string>
+
 </resources>

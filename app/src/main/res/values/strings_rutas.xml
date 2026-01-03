@@ -7,13 +7,20 @@
     <string name="ruta_1_dificultad">BAJA</string>
     <string name="ruta_1_leyenda">📍 Destino</string>
     <string name="ruta_1_descripcion">Ruta que te lleva desde el horreo de lira al de Carnota que son de los más emblemáticos de Galicia.</string>
-    <string name="ruta_1_importante">- Llevar calzado apto.\n- Tener cuidado con 2-3 zonas donde no hay acera</string>
+    <string name="ruta_1_importante">- Llevar calzado apto.&#10;- Tener cuidado con 2-3 zonas donde no hay acera.</string>
 
     <string name="ruta_2_titulo">Una vuelta por Carnota y alrededores</string>
     <string name="ruta_2_duracion">45-75 minutos</string>
     <string name="ruta_2_dificultad">BAJA</string>
     <string name="ruta_2_leyenda">📍 Destino</string>
-    <string name="ruta_2_descripcion">Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas</string>
-    <string name="ruta_2_importante">- Llevar calzado apto (tierra y arena).\n- Hay alternativa solo terrestre cortesia de google maps</string>
+    <string name="ruta_2_descripcion">Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas.</string>
+    <string name="ruta_2_importante">- Llevar calzado apto (tierra y arena).&#10;- Hay alternativa solo terrestre cortesia de google maps</string>
+
+    <string name="ruta_3_titulo">Del faro a Louredo</string>
+    <string name="ruta_3_duracion">240 minutos</string>
+    <string name="ruta_3_dificultad">MEDIA</string>
+    <string name="ruta_3_leyenda">📍 Destino</string>
+    <string name="ruta_3_descripcion">Ruta donde empiezas en el faro de lariño y terminas en louredo siguiendo su ruta de senderismo</string>
+    <string name="ruta_3_importante">- Salir a una hora prudente.&#10;- Tener en cuenta la distancia de ir y volver.&#10;- Al llegar al final de aqui coger el mapa de la ruta de senderismo Lariño - Louredo</string>
 
 </resources>

@@ -16,4 +16,11 @@
     <string name="ruta_2_descripcion">Route that takes you from the hórreo in Carnota to its two nearest beaches</string>
     <string name="ruta_2_importante">- Wear appropriate footwear (dirt and sand).\n- There is an alternative land-only route courtesy of Google Maps</string>
 
+    <string name="ruta_3_titulo">From the lighthouse to Louredo</string>
+    <string name="ruta_3_duracion">240 minutes</string>
+    <string name="ruta_3_dificultad">MEDIUM</string>
+    <string name="ruta_3_leyenda">📍 Destination</string>
+    <string name="ruta_3_descripcion">Route where you start at the Lariño lighthouse and finish in Louredo following its hiking trail</string>
+    <string name="ruta_3_importante">- Leave at a reasonable hour.\n- Take into account the distance for the round trip.\n- At the end, pick up the map for the Lariño - Louredo hiking route.</string>
+
 </resources>

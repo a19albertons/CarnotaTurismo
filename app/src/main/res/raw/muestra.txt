@@ -79,6 +79,33 @@ importante: - Tener cuidado con las corrientes.
 - Hay varios zonas de aparcamiento disponibles.
 favorito: 0
 -------------
+Lugar
+id: 7
+titulo: Senda Verde 1
+ubicacion: Gandara
+leyenda: 📍 Destino
+descripcion: Ruta donde puedes disfrutar de vistas en el monte de carnota por una ruta reconocida como una sende verda
+imagen: @drawable/senda_verde_1
+imagenMapa: @drawable/senda_verde_1_mapa
+imagenMapaEnlace: https://www.google.com/maps/dir//42.7586294,-9.1097491/@42.7589574,-9.1097325,519m/data=!3m1!1e3!4m2!4m1!3e2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+tipo: Senderismo
+importante: - Llevar agua, calzado debido, salir a hora prudentes...
+favorito: 0
+-------------
+Lugar
+id: 8
+titulo: Faro Lariño
+ubicacion: Lariño
+leyenda: 📍 Destino
+descripcion: Antiguo faro que servía para avisar a los barcos del riesgo de chocar contra la costa
+imagen: @drawable/faro_larino
+imagenMapa: @drawable/faro_larino_mapa
+imagenMapaEnlace: https://www.google.com/maps/dir//Faro+de+Punta+Lari%C3%B1o,+Faro+de+Lari%C3%B1o,+328,+15292+Carnota,+A+Coru%C3%B1a/@42.7715457,-9.1294853,3199m/data=!3m1!1e3!4m17!1m7!3m6!1s0xd2f2a4ab0c59809:0x10b304d4a3c08f45!2sFaro+de+Punta+Lari%C3%B1o!8m2!3d42.7725437!4d-9.1247948!16s%2Fg%2F11f_knc6hx!4m8!1m0!1m5!1m1!1s0xd2f2a4ab0c59809:0x10b304d4a3c08f45!2m2!1d-9.1247948!2d42.7725437!3e2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+tipo: Monumento
+importante: - Dispone de aparcamiento cerca del mismo.
+- Actualmente reconvertido a hotel, pero aún se puede visitar.
+favorito: 0
+-------------
 Ruta
 id: 1
 titulo: Ruta del horreo
@@ -92,7 +119,7 @@ imagenMapaEnlace: https://www.google.com/maps/dir/H%C3%B3rreo+de+Lira,+R%C3%BAa+
 leyenda: 📍 Destino
 descripcion: Ruta que te lleva desde el horreo de lira al de Carnota que son de los más emblemáticos de Galicia.
 importante: - Llevar calzado apto.
-- Tener cuidado con 2-3 zonas donde no hay acera
+- Tener cuidado con 2-3 zonas donde no hay acera.
 favorito: 0
 lugares_ids: 2,1
 -------------
@@ -107,8 +134,26 @@ imagen: @drawable/ruta2
 imagenMapa: @drawable/ruta2_mapa
 imagenMapaEnlace: https://www.google.com/maps/dir/H%C3%B3rreo+de+Carnota,+15293+Vilar,+A+Coru%C3%B1a/42.827693,-9.104906/Praia+Boca+do+R%C3%ADo/@42.8326324,-9.1032108,3193m/data=!3m1!1e3!4m15!4m14!1m5!1m1!1s0xd2ed7d0c15088f1:0xe8735ec7427c5bab!2m2!1d-9.0905616!2d42.8224189!1m0!1m5!1m1!1s0xd2ed5d705270369:0xb6b3d2ec516a36ca!2m2!1d-9.1036903!2d42.8404741!3e2!5m2!1e1!1e4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
 leyenda: 📍 Destino
-descripcion: Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas
+descripcion: Ruta que te lleva desde el horreo de Carnota por sus 2 playas más cercanas.
 importante: - Llevar calzado apto (tierra y arena).
 - Hay alternativa solo terrestre cortesia de google maps
 favorito: 0
 lugares_ids: 1,4,6
+-------------
+Ruta
+id: 3
+titulo: Del faro a Louredo
+ubicacion: Lariño - Louredo
+duracion: 240 minutos
+km: 21
+dificultad: MEDIA
+imagen: @drawable/ruta3
+imagenMapa: @drawable/ruta3_mapa
+imagenMapaEnlace: https://www.google.com/maps/dir/Faro+de+Punta+Lari%C3%B1o,+Faro+de+Lari%C3%B1o,+328,+15292+Carnota,+A+Coru%C3%B1a/Lugar+Lari%C3%B1o,+276,+15292+Carnota,+La+Coru%C3%B1a/@42.7746936,-9.1265688,1307m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0xd2f2a4ab0c59809:0x10b304d4a3c08f45!2m2!1d-9.1247948!2d42.7725437!1m5!1m1!1s0xd2f2a344f999f43:0x624321a32ee9e05c!2m2!1d-9.1201294!2d42.7755746!3e2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D
+leyenda: 📍 Destino
+descripcion: Ruta donde empiezas en el faro de lariño y terminas en louredo siguiendo su ruta de senderismo
+importante: - Salir a una hora prudente.
+- Tener en cuenta la distancia de ir y volver.
+- Al llegar al final de aqui coger el mapa de la ruta de senderismo Lariño - Louredo
+favorito: 0
+lugares_ids: 8,3
