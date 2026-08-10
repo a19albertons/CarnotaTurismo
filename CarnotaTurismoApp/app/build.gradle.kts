@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-parcelize")
-    id("com.google.devtools.ksp")
-    id("androidx.navigation.safeargs")
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.androidx.navigation.safeargs)
 
     // Generación de documentación con Dokka
     alias(libs.plugins.kotlin.dokka)

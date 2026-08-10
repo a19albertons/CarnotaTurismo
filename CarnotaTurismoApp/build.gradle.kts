@@ -2,10 +2,11 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
-    id("androidx.navigation.safeargs") version "2.9.6" apply false
+    alias(libs.plugins.kotlin.parcelize) apply false
+    alias(libs.plugins.androidx.navigation.safeargs) apply false
 
     // Ksp en lugar de kapt
-    id("com.google.devtools.ksp") version "2.3.4" apply false
+    alias(libs.plugins.ksp) apply false
 
     // Generación de documentación con Dokka
     alias(libs.plugins.kotlin.dokka)
