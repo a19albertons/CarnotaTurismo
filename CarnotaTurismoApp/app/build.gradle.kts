@@ -4,6 +4,12 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs")
+
+    // Generación de documentación con Dokka
+    alias(libs.plugins.kotlin.dokka)
+
+    // Ktlint para formatear el código
+    alias(libs.plugins.ktlint)
 } 
 
 android {
