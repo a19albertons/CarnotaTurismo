@@ -2,10 +2,6 @@ package com.example.carnotaturismo.util
 
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
-
- /**
- * Helper para gestionar locales de la aplicación.
- */
 import java.text.Normalizer
 
 object LocaleHelper {

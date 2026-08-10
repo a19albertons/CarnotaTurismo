@@ -10,9 +10,7 @@ import com.example.carnotaturismo.R
 class MusicService : Service() {
     private var mediaPlayer: MediaPlayer? = null
 
-    override fun onBind(intent: Intent?): IBinder? {
-        return null
-    }
+    override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -23,7 +21,11 @@ class MusicService : Service() {
         Log.d("MusicService", "Servicio de música creado y MediaPlayer inicializado.")
     }
 
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+    override fun onStartCommand(
+        intent: Intent?,
+        flags: Int,
+        startId: Int,
+    ): Int {
         // Se llama cada vez que se inicia el servicio con startService().
         if (mediaPlayer?.isPlaying == false) {
             mediaPlayer?.start()

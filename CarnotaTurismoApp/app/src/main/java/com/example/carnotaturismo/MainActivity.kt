@@ -1,21 +1,21 @@
 package com.example.carnotaturismo
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.content.Intent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.lifecycle.ViewModelProvider
-import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.services.MusicService
+import com.example.carnotaturismo.viewModel.TurismoAppModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
  * Actividad principal de la aplicación.
@@ -67,13 +67,16 @@ class MainActivity : AppCompatActivity() {
                         navController.popBackStack(R.id.lugarFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
                     }
                     R.id.itinerarioListaFragment -> {
-                        navController.popBackStack(R.id.itinerarioListaFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                        navController.popBackStack(R.id.itinerarioListaFragment, false) ||
+                            NavigationUI.onNavDestinationSelected(item, navController)
                     }
                     R.id.mapaGeneralFragment -> {
-                        navController.popBackStack(R.id.mapaGeneralFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                        navController.popBackStack(R.id.mapaGeneralFragment, false) ||
+                            NavigationUI.onNavDestinationSelected(item, navController)
                     }
                     R.id.favoritosFragment -> {
-                        navController.popBackStack(R.id.favoritosFragment, false) || NavigationUI.onNavDestinationSelected(item, navController)
+                        navController.popBackStack(R.id.favoritosFragment, false) ||
+                            NavigationUI.onNavDestinationSelected(item, navController)
                     }
                     else -> false
                 }
@@ -94,8 +97,13 @@ class MainActivity : AppCompatActivity() {
 
         // Observar cambios de idioma y recrear sólo si cambia realmente
         appModel.idioma.observe(this) { nuevo ->
-            val currentTags = androidx.appcompat.app.AppCompatDelegate.getApplicationLocales().toLanguageTags()
-            val newTag = com.example.carnotaturismo.util.LocaleHelper.tagForName(nuevo) ?: ""
+            val currentTags =
+                androidx.appcompat.app.AppCompatDelegate
+                    .getApplicationLocales()
+                    .toLanguageTags()
+            val newTag =
+                com.example.carnotaturismo.util.LocaleHelper
+                    .tagForName(nuevo) ?: ""
             if (newTag != currentTags) {
                 recreate()
             }
@@ -119,11 +127,10 @@ class MainActivity : AppCompatActivity() {
      * @param item Elemento del menú seleccionado.
      * @return true si se manejó la selección.
      */
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(
+    override fun onOptionsItemSelected(item: MenuItem): Boolean =
+        NavigationUI.onNavDestinationSelected(
             item,
-            navController
-        ) || super.onOptionsItemSelected(item)
-
-    }
+            navController,
+        ) ||
+            super.onOptionsItemSelected(item)
 }

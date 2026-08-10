@@ -9,8 +9,8 @@ import com.example.carnotaturismo.dao.LugarDAO
 import com.example.carnotaturismo.dao.RutaLugarDAO
 import com.example.carnotaturismo.dao.RutasDAO
 import com.example.carnotaturismo.model.Lugar
-import com.example.carnotaturismo.model.Rutas
 import com.example.carnotaturismo.model.RutaLugar
+import com.example.carnotaturismo.model.Rutas
 
 /**
  * Base de datos de turismo.
@@ -39,35 +39,30 @@ abstract class TurismoDatabase : RoomDatabase() {
      */
     abstract fun rutaLugarDao(): RutaLugarDAO
 
-
-    /**
-     * Obtiene una instancia de la base de datos de turismo.
-     *
-     * @param context Contexto de la aplicación.
-     * @return Instancia de la base de datos de turismo.
-     */
     companion object {
         /**
          * Instancia de la base de datos de turismo.
          */
         @Volatile
-        private var INSTANCE: TurismoDatabase? = null
+        private var instance: TurismoDatabase? = null
 
         /**
          * Obtiene una instancia de la base de datos de turismo.
          *
          * @param context Contexto de la aplicación.
          */
-        fun getDatabase(context: Context): TurismoDatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder<TurismoDatabase>(
-                    context.applicationContext,
-                    TurismoDatabase::class.java,
-                    "turismo.db"
-                ).createFromAsset("turismo.db").build()
-                INSTANCE = instance
+        fun getDatabase(context: Context): TurismoDatabase =
+            instance ?: synchronized(this) {
+                val instance =
+                    Room
+                        .databaseBuilder<TurismoDatabase>(
+                            context.applicationContext,
+                            TurismoDatabase::class.java,
+                            "turismo.db",
+                        ).createFromAsset("turismo.db")
+                        .build()
+                Companion.instance = instance
                 instance
             }
-        }
     }
 }

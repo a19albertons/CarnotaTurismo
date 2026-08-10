@@ -20,7 +20,9 @@ import kotlinx.coroutines.launch
  *
  * @param application Aplicación.
  */
-class TurismoAppModel(application: Application) : AndroidViewModel(application) {
+class TurismoAppModel(
+    application: Application,
+) : AndroidViewModel(application) {
     /**
      * Base de datos de turismo
      */
@@ -46,7 +48,6 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
      */
     val rutasConLugares: LiveData<List<RutasConLugares>> = repository.obtenerRutasConLugares()
 
-
     /**
      * Obtiene una ruta junto con sus lugares (relación N:N) por id.
      */
@@ -55,24 +56,30 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
     /**
      * Obtiene los lugares favoritos.
      */
-    fun obtenerLugaresFavoritos() : LiveData<List<Lugar>> = repository.obtenerLugaresFavoritos()
+    fun obtenerLugaresFavoritos(): LiveData<List<Lugar>> = repository.obtenerLugaresFavoritos()
 
     /**
      * Obtiene las rutas favoritas.
      */
-    fun obtenerRutasFavoritas() : LiveData<List<Rutas>> = repository.obtenerRutasFavoritas()
+    fun obtenerRutasFavoritas(): LiveData<List<Rutas>> = repository.obtenerRutasFavoritas()
 
     /**
      * método para marcar/desmarcar favorito desde ViewModel
      */
-    fun setFavoritoLugar(id: Int, valor: Int) {
+    fun setFavoritoLugar(
+        id: Int,
+        valor: Int,
+    ) {
         // No bloqueamos el hilo principal
         viewModelScope.launch(Dispatchers.IO) {
             repository.setFavoritoLugar(id, valor)
         }
     }
 
-    fun setFavoritoRuta(id: Int, valor: Int) {
+    fun setFavoritoRuta(
+        id: Int,
+        valor: Int,
+    ) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.setFavoritoRuta(id, valor)
         }
@@ -81,13 +88,15 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
     // Preferencias basicas: idioma y musica
     private val prefs = application.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
-    val idioma = MutableLiveData<String>().apply {
-        value = prefs.getString("pref_idioma", "Sistema") ?: "Sistema"
-    }
+    val idioma =
+        MutableLiveData<String>().apply {
+            value = prefs.getString("pref_idioma", "Sistema") ?: "Sistema"
+        }
 
-    val musica = MutableLiveData<Boolean>().apply {
-        value = prefs.getBoolean("pref_musica", true)
-    }
+    val musica =
+        MutableLiveData<Boolean>().apply {
+            value = prefs.getBoolean("pref_musica", true)
+        }
 
     fun setIdioma(nuevo: String) {
         idioma.value = nuevo
@@ -106,5 +115,4 @@ class TurismoAppModel(application: Application) : AndroidViewModel(application) 
             prefs.edit().putBoolean("pref_musica", activo).apply()
         }
     }
-
 }

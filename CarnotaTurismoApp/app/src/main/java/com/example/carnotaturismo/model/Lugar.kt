@@ -5,7 +5,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-
 /**
  * Clase que representa un lugar y todos los datos que construyen la aplicacion
  */
@@ -23,6 +22,5 @@ data class Lugar(
     val imagenMapaEnlace: String,
     val tipo: TipoUbicacion,
     val importante: String,
-    var favorito: Boolean
-
+    var favorito: Boolean,
 ) : Parcelable

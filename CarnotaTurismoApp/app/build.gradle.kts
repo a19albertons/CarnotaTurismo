@@ -4,7 +4,13 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs")
-} 
+
+    // Generación de documentación con Dokka
+    alias(libs.plugins.kotlin.dokka)
+
+    // Ktlint para formatear el código
+    alias(libs.plugins.ktlint)
+}
 
 android {
     namespace = "com.example.carnotaturismo"
@@ -27,7 +33,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }

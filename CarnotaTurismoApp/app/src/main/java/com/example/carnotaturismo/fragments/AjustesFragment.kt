@@ -1,19 +1,19 @@
 package com.example.carnotaturismo.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.content.Intent
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.carnotaturismo.databinding.FragmentAjustesBinding
-import com.example.carnotaturismo.viewModel.TurismoAppModel
-import com.example.carnotaturismo.services.MusicService
 import com.example.carnotaturismo.R
+import com.example.carnotaturismo.databinding.FragmentAjustesBinding
+import com.example.carnotaturismo.services.MusicService
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 
 /**
  * Clase que representa el fragmento Ajustes
@@ -21,16 +21,17 @@ import com.example.carnotaturismo.R
 class AjustesFragment : Fragment() {
     // bindings
     private var _binding: FragmentAjustesBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelos
-    private val model: TurismoAppModel by viewModels() {
+    private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentAjustesBinding.inflate(inflater, container, false)
         val view = binding.root

@@ -14,7 +14,11 @@ object ImageHelper {
      * - Si no, intenta buscar directamente como drawable
      * - Si no encuentra nada, usa R.drawable.pruebas como fallback
      */
-    fun setImageFromRef(ctx: Context, imageRef: String?, imageView: ImageView) {
+    fun setImageFromRef(
+        ctx: Context,
+        imageRef: String?,
+        imageView: ImageView,
+    ) {
         if (!imageRef.isNullOrBlank()) {
             val ref = imageRef.removePrefix("@")
             val parts = ref.split('/', limit = 2)

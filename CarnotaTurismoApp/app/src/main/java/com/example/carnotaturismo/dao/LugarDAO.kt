@@ -1,9 +1,9 @@
 package com.example.carnotaturismo.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Query
 import com.example.carnotaturismo.model.Lugar
-import androidx.lifecycle.LiveData
 
 /**
  * Interfaz de acceso a datos para la entidad Lugar.
@@ -30,6 +30,8 @@ interface LugarDAO {
      * Marca o desmarca un lugar como favorito (0/1)
      */
     @Query("UPDATE ubicaciones SET favorito = :valor WHERE id = :id")
-    suspend fun setFavoritoLugar(id: Int, valor: Int)
-
+    suspend fun setFavoritoLugar(
+        id: Int,
+        valor: Int,
+    )
 }
