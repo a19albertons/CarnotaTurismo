@@ -62,7 +62,6 @@ class InicioVerticalAdapter(
         if (holder.recyclerViewHorizontal.layoutManager == null) {
             holder.recyclerViewHorizontal.layoutManager =
                 LinearLayoutManager(holder.itemView.context, LinearLayoutManager.HORIZONTAL, false)
-            holder.recyclerViewHorizontal.setHasFixedSize(true)
         }
 
         // Asignar el adaptador (filtrado por tipo), pasando el callback para favoritos
