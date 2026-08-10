@@ -9,7 +9,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.carnotaturismo.R
 import com.example.carnotaturismo.fragments.FavoritosFragmentDirections
-import com.example.carnotaturismo.model.Lugar
 import com.example.carnotaturismo.model.Rutas
 import com.example.carnotaturismo.util.ImageHelper
 import com.example.carnotaturismo.util.resolveString
@@ -19,18 +18,17 @@ import com.example.carnotaturismo.util.resolveString
  */
 class FavoritosRutaAdapter(
     private var ruta: List<Rutas>,
-    private val onToggleFavorito: (Rutas) -> Unit
+    private val onToggleFavorito: (Rutas) -> Unit,
 ) : RecyclerView.Adapter<FavoritosRutaAdapter.ViewHolder>() {
-
     // 1. ViewHolder: Guarda las referencias a las vistas de cada fila
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(
+        itemView: View,
+    ) : RecyclerView.ViewHolder(itemView) {
         val imagen: ImageView = itemView.findViewById(R.id.foto_inicio)
         val titulo: TextView = itemView.findViewById(R.id.titulo)
         val tarjeta: View = itemView.findViewById(R.id.tarjeta)
         val favorito: ImageView = itemView.findViewById(R.id.iv_favorito)
     }
-
-
 
     // Permite actualizar los datos y refrescar la vista
     fun setDataRuta(newModel: List<Rutas>) {
@@ -38,16 +36,23 @@ class FavoritosRutaAdapter(
         notifyDataSetChanged()
     }
 
-
     // 2. Crea nuevos ViewHolders (infla el layout de la fila)
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.adapter_favoritos_lugar, parent, false)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): ViewHolder {
+        val view =
+            LayoutInflater
+                .from(parent.context)
+                .inflate(R.layout.adapter_favoritos_lugar, parent, false)
         return ViewHolder(view)
     }
 
     // 3. Reemplaza el contenido de una vista (une los datos a la vista)
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: ViewHolder,
+        position: Int,
+    ) {
         val currentItem = ruta[position]
 
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
@@ -70,12 +75,12 @@ class FavoritosRutaAdapter(
         }
 
         holder.tarjeta.setOnClickListener {
-            holder.itemView.findNavController().navigate(FavoritosFragmentDirections.actionFavoritosFragmentToItinerarioDetallesFragment(currentItem))
+            holder.itemView.findNavController().navigate(
+                FavoritosFragmentDirections.actionFavoritosFragmentToItinerarioDetallesFragment(currentItem),
+            )
         }
     }
 
     // 4. Devuelve el número total de elementos
     override fun getItemCount() = ruta.size
-
-
 }

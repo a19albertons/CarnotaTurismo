@@ -2,17 +2,17 @@ package com.example.carnotaturismo.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentLugarDetallesBinding
-import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.util.resolveString
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 
 /**
  * Fragmento que representa lugar detalles
@@ -20,16 +20,17 @@ import com.example.carnotaturismo.util.resolveString
 class LugarDetallesFragment : Fragment() {
     // bindings
     private var _binding: FragmentLugarDetallesBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelo
-    private val model: TurismoAppModel by viewModels() {
+    private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentLugarDetallesBinding.inflate(inflater, container, false)
@@ -56,7 +57,8 @@ class LugarDetallesFragment : Fragment() {
         }
 
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
-        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), lugar.imagenMapa, binding.fotoMapa)
+        com.example.carnotaturismo.util.ImageHelper
+            .setImageFromRef(requireContext(), lugar.imagenMapa, binding.fotoMapa)
         binding.leyenda.text = requireContext().resolveString(lugar.leyenda)
         binding.descripcion.text = requireContext().resolveString(lugar.descripcion)
         binding.importante.text = requireContext().resolveString(lugar.importante)
@@ -68,12 +70,6 @@ class LugarDetallesFragment : Fragment() {
             startActivity(intent)
         }
 
-
-
-
-
         return view
     }
-
-
 }

@@ -1,10 +1,10 @@
 package com.example.carnotaturismo.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,17 +18,17 @@ import com.example.carnotaturismo.viewModel.TurismoAppModel
 class LugarFragment : Fragment() {
     // bindings
     private var _binding: FragmentLugarBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelo
-    private val model: TurismoAppModel by viewModels() {
+    private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentLugarBinding.inflate(inflater, container, false)
@@ -43,9 +43,10 @@ class LugarFragment : Fragment() {
 
         // Inicializar adapter con lista vacía y observar cambios en LiveData
         val listaLugares = model.lugares.value ?: emptyList()
-        val adapter = LugarAdapter(listaLugares) { lugar ->
-            model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0)
-        }
+        val adapter =
+            LugarAdapter(listaLugares) { lugar ->
+                model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0)
+            }
         recyclerView.adapter = adapter
 
         // Observar cambios en LiveData y actualizar el adapter
@@ -55,6 +56,4 @@ class LugarFragment : Fragment() {
 
         return view
     }
-
-
 }

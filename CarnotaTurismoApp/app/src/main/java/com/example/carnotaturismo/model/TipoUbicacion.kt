@@ -8,14 +8,16 @@ import com.example.carnotaturismo.R
 enum class TipoUbicacion {
     Monumento,
     Senderismo,
-    Playa;
+    Playa,
+    ;
 
     /**
      * Devuelve el id de recurso de la etiqueta para este tipo de ubicación.
      */
-    fun labelRes(): Int = when (this) {
-        Monumento -> R.string.tipo_monumento
-        Senderismo -> R.string.tipo_senderismo
-        Playa -> R.string.tipo_playa
-    }
+    fun labelRes(): Int =
+        when (this) {
+            Monumento -> R.string.tipo_monumento
+            Senderismo -> R.string.tipo_senderismo
+            Playa -> R.string.tipo_playa
+        }
 }

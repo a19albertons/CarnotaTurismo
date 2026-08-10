@@ -1,17 +1,16 @@
 package com.example.carnotaturismo.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.carnotaturismo.adapters.VerTodosAdapter
 import com.example.carnotaturismo.databinding.FragmentVerTodosBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
-import com.example.carnotaturismo.util.resolveString
 import kotlin.getValue
 
 /**
@@ -21,7 +20,7 @@ import kotlin.getValue
 class VerTodosFragment : Fragment() {
     // bindings
     private var _binding: FragmentVerTodosBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelo
     private val model: TurismoAppModel by viewModels {
@@ -29,8 +28,9 @@ class VerTodosFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentVerTodosBinding.inflate(inflater, container, false)
@@ -47,10 +47,11 @@ class VerTodosFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         // Inicializar adapter con la lista que recibe y pasar callback para actualizar favorito
-        val adapter = VerTodosAdapter(lista.toList()) { lugar ->
-            // Llamada al ViewModel para actualizar BD (1 = favorito, 0 = no)
-            model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0)
-        }
+        val adapter =
+            VerTodosAdapter(lista.toList()) { lugar ->
+                // Llamada al ViewModel para actualizar BD (1 = favorito, 0 = no)
+                model.setFavoritoLugar(lugar.id, if (lugar.favorito) 1 else 0)
+            }
         recyclerView.adapter = adapter
 
         // Texto tipo (resuelve clave de recurso o texto literal)
@@ -62,8 +63,5 @@ class VerTodosFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-
     }
-
-
 }

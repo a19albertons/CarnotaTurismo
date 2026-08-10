@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentSobreBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
-import com.example.carnotaturismo.R
 
 /**
  * Clase que representa el fragmento Sobre
@@ -17,16 +17,17 @@ import com.example.carnotaturismo.R
 class SobreFragment : Fragment() {
     // bindings
     private var _binding: FragmentSobreBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelo
-    private val model: TurismoAppModel by viewModels() {
+    private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentSobreBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -34,7 +35,6 @@ class SobreFragment : Fragment() {
         // Mostrar versión
 
         binding.versionText.text = getString(R.string.version_label) + "1.0.5"
-
 
         return view
     }

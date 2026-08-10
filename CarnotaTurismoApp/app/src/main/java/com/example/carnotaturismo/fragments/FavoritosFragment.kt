@@ -1,10 +1,10 @@
 package com.example.carnotaturismo.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,17 +20,17 @@ import kotlin.getValue
 class FavoritosFragment : Fragment() {
     // bindings
     private var _binding: FragmentFavoritosBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelo
-    private val model: TurismoAppModel by viewModels() {
+    private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentFavoritosBinding.inflate(inflater, container, false)
@@ -41,20 +41,22 @@ class FavoritosFragment : Fragment() {
         val recyclerViewLugar = binding.RecyclerViewFavoritosLugar
         recyclerViewLugar.layoutManager = LinearLayoutManager(requireContext())
         // Inicializar adapter con lista de favoritos
-        val lugar = model.obtenerLugaresFavoritos().value?: emptyList()
-        val adapterLugar = FavoritosLugarAdapter(lugar) { lugarItem ->
-            model.setFavoritoLugar(lugarItem.id, if (lugarItem.favorito) 1 else 0)
-        }
+        val lugar = model.obtenerLugaresFavoritos().value ?: emptyList()
+        val adapterLugar =
+            FavoritosLugarAdapter(lugar) { lugarItem ->
+                model.setFavoritoLugar(lugarItem.id, if (lugarItem.favorito) 1 else 0)
+            }
         recyclerViewLugar.adapter = adapterLugar
 
         // Ruta
         val recyclerViewRuta = binding.RecyclerViewFavoritosRutas
         recyclerViewRuta.layoutManager = LinearLayoutManager(requireContext())
         // Inicializar adapter con lista de favoritos
-        val ruta = model.obtenerRutasFavoritas().value?: emptyList()
-        val adapterRuta = FavoritosRutaAdapter(ruta) { rutaItem ->
-            model.setFavoritoRuta(rutaItem.id, if (rutaItem.favorito) 1 else 0)
-        }
+        val ruta = model.obtenerRutasFavoritas().value ?: emptyList()
+        val adapterRuta =
+            FavoritosRutaAdapter(ruta) { rutaItem ->
+                model.setFavoritoRuta(rutaItem.id, if (rutaItem.favorito) 1 else 0)
+            }
         recyclerViewRuta.adapter = adapterRuta
 
         // Observar solo los favoritos y actualizar el adapter
@@ -65,12 +67,6 @@ class FavoritosFragment : Fragment() {
             adapterRuta.setDataRuta(lista)
         }
 
-
-
-
-
         return view
     }
-
-
 }

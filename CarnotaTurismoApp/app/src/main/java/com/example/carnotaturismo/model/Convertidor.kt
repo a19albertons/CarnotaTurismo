@@ -8,23 +8,15 @@ import androidx.room.TypeConverter
 class Convertidor {
     // TipoUbicacion
     @TypeConverter
-    fun fromTipoUbicacion(value: TipoUbicacion): String {
-        return value.name
-    }
+    fun fromTipoUbicacion(value: TipoUbicacion): String = value.name
 
     @TypeConverter
-    fun toTipoUbicacion(value: String): TipoUbicacion {
-        return runCatching { TipoUbicacion.valueOf(value) }.getOrDefault(TipoUbicacion.Monumento)
-    }
+    fun toTipoUbicacion(value: String): TipoUbicacion = runCatching { TipoUbicacion.valueOf(value) }.getOrDefault(TipoUbicacion.Monumento)
 
     // Dificultad
     @TypeConverter
-    fun fromDificultad(value: Dificultad): String {
-        return value.name
-    }
+    fun fromDificultad(value: Dificultad): String = value.name
 
     @TypeConverter
-    fun toDificultad(value: String): Dificultad {
-        return runCatching { Dificultad.valueOf(value) }.getOrDefault(Dificultad.MEDIA)
-    }
+    fun toDificultad(value: String): Dificultad = runCatching { Dificultad.valueOf(value) }.getOrDefault(Dificultad.MEDIA)
 }

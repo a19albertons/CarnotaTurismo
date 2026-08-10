@@ -30,5 +30,8 @@ interface RutasDAO {
      * Marca o desmarca una ruta como favorita (0/1)
      */
     @Query("UPDATE rutas SET favorito = :valor WHERE id = :id")
-    suspend fun setFavoritoRuta(id: Int, valor: Int)
+    suspend fun setFavoritoRuta(
+        id: Int,
+        valor: Int,
+    )
 }

@@ -3,7 +3,7 @@ package com.example.carnotaturismo
 import android.app.Application
 import com.example.carnotaturismo.util.LocaleHelper
 
- /**
+/**
  * Clase Application para inicializar configuraciones globales.
  */
 class App : Application() {

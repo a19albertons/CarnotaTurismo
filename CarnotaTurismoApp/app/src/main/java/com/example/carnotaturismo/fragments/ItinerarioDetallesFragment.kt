@@ -1,19 +1,18 @@
 package com.example.carnotaturismo.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.net.toUri
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentItinerarioDetallesBinding
-import com.example.carnotaturismo.viewModel.TurismoAppModel
 import com.example.carnotaturismo.util.resolveString
-import androidx.core.net.toUri
+import com.example.carnotaturismo.viewModel.TurismoAppModel
 
 /**
  * Clase que representa el fragmento Itinerario Detalles
@@ -21,16 +20,17 @@ import androidx.core.net.toUri
 class ItinerarioDetallesFragment : Fragment() {
     // bindings
     private var _binding: FragmentItinerarioDetallesBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // modelo
-    private val model: TurismoAppModel by viewModels() {
+    private val model: TurismoAppModel by viewModels {
         ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentItinerarioDetallesBinding.inflate(inflater, container, false)
@@ -57,7 +57,8 @@ class ItinerarioDetallesFragment : Fragment() {
         }
 
         // Cargar imagen desde la referencia almacenada en la BD (p. ej. "@drawable/nombre")
-        com.example.carnotaturismo.util.ImageHelper.setImageFromRef(requireContext(), ruta.imagenMapa, binding.fotoMapa)
+        com.example.carnotaturismo.util.ImageHelper
+            .setImageFromRef(requireContext(), ruta.imagenMapa, binding.fotoMapa)
         binding.leyenda.text = requireContext().resolveString(ruta.leyenda)
 
         // Obtener los lugares asociados a esta ruta y mostrarlos
@@ -83,6 +84,4 @@ class ItinerarioDetallesFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

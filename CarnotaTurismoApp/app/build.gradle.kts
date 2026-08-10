@@ -10,7 +10,7 @@ plugins {
 
     // Ktlint para formatear el código
     alias(libs.plugins.ktlint)
-} 
+}
 
 android {
     namespace = "com.example.carnotaturismo"
@@ -33,7 +33,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }

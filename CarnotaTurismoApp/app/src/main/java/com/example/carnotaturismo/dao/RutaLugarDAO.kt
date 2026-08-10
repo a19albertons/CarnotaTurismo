@@ -14,6 +14,7 @@ interface RutaLugarDAO {
     @Transaction
     @Query("SELECT * FROM rutas")
     fun obtenerTodas(): LiveData<List<RutasConLugares>>
+
     /**
      * Obtiene una ruta junto con sus lugares (relación N:N).
      */

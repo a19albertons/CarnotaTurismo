@@ -24,5 +24,5 @@ data class Rutas(
     // val lugares: List<Lugar>,
     val descripcion: String,
     val importante: String,
-    var favorito: Boolean
+    var favorito: Boolean,
 ) : Parcelable
