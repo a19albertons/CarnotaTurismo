@@ -15,7 +15,9 @@ plugins {
 android {
     namespace = "com.example.carnotaturismo"
     compileSdk {
-        version = release(36)
+        version = release(37) {
+            minorApiLevel = 1
+        }
     }
 
     defaultConfig {
