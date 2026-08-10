@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.example.carnotaturismo.BuildConfig
 import com.example.carnotaturismo.R
 import com.example.carnotaturismo.databinding.FragmentSobreBinding
 import com.example.carnotaturismo.viewModel.TurismoAppModel
@@ -34,8 +35,7 @@ class SobreFragment : Fragment() {
 
         // Mostrar versión
 
-        binding.versionText.text = getString(R.string.version_label) + "1.0.5"
-
+        binding.versionText.text = "${getString(R.string.version_label)} ${BuildConfig.VERSION_NAME}"
         return view
     }
 
