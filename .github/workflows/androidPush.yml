@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checkout del repositorio
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Configuración de Java
       - name: Configurar Java
@@ -46,7 +46,7 @@ jobs:
     steps:
       # Checkout del repositorio
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Configuración de Java
       - name: Configurar Java
@@ -75,7 +75,7 @@ jobs:
     steps:
       # Checkout del repositorio
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Configuración de Java
       - name: Configurar Java
@@ -101,7 +101,7 @@ jobs:
     steps:
       # Checkout del repositorio
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Configuración de Java
       - name: Configurar Java
@@ -141,7 +141,7 @@ jobs:
     steps:
       # Checkout del repositorio
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Configuración de Java
       - name: Configurar Java
@@ -196,7 +196,7 @@ jobs:
     steps:
       # Checkout del repositorio
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # Descargar apk
       - name: Descargar APKs firmada como artefactos
