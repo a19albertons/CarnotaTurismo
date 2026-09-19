@@ -61,7 +61,7 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Subir APKs firmados como artefactos
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: apkSinFirmar
           path: ${{ github.workspace }}/CarnotaTurismoApp/app/build/outputs/apk/release/app-release-unsigned.apk
@@ -179,7 +179,7 @@ jobs:
             "./apkSinFirmar/app-release-unsigned.apk"
 
       - name: Subir APKs firmada como artefactos
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: apkFirmada
           path: ./app-signed.apk
