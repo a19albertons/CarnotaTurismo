@@ -152,7 +152,7 @@ jobs:
 
       # Descargar apk
       - name: Descargar APKs firmados como artefactos
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: apkSinFirmar
           path: ./apkSinFirmar
@@ -200,7 +200,7 @@ jobs:
 
       # Descargar apk
       - name: Descargar APKs firmada como artefactos
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: apkFirmada
           path: ./apkFirmada
