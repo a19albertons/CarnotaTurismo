@@ -223,7 +223,7 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.ref_name }}
-          name: ${{ github.ref_name }}-${{ steps.version.outputs.version }}
+          name: CarnotaTurismo-${{ steps.version.outputs.version }}
           body_path: cambios.md
           files: ./apkFirmada/CarnotaTurismo-${{ steps.version.outputs.version }}.apk
           draft: false
