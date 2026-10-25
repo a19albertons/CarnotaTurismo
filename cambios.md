@@ -1,5 +1,5 @@
 # Notas de desarrollo
-CarnotaTurismo versión 1.0.2 esta disponible
+CarnotaTurismo versión 1.0.3 esta disponible
 
-## Cambios en la versión 1.0.2:
+## Cambios en la versión 1.0.3:
 - Dependencias actualizadas
